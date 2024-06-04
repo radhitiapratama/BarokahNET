@@ -12,10 +12,15 @@
 
 ```
 php artisan key:generate
+
 php artisan migrate
+
 composer install
+
 npm install
+
 npm run dev
+
 php artisan serve
 ```
 - Akses website di
