@@ -1,6 +1,6 @@
 <h3>Sebelum menginstall pastikan di komputer anda sudah ada </h3>
 
-- PHP Versi 8.X ke atas
+- PHP Versi 8.2 ke atas
 - Node JS versi terbaru
 - Composer
 
