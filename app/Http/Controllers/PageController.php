@@ -24,7 +24,8 @@ class PageController extends Controller
                 'IP Dinamis',
                 '100% Fiber Optic',
                 'Harga Sudah Termasuk Pajak / PPN 11%'
-            ]
+            ],
+            'delay' => 0
         ],
         [
             'title' => "DHAHA PRIMA FIBER 25 Mbps",
@@ -42,7 +43,8 @@ class PageController extends Controller
                 'IP Dinamis',
                 '100% Fiber Optic',
                 'Harga Sudah Termasuk Pajak / PPN 11%'
-            ]
+            ],
+            'delay' => 200
         ],
         [
             'title' => "DHAHA PRIMA FIBER 30 Mbps",
@@ -60,7 +62,8 @@ class PageController extends Controller
                 'IP Dinamis',
                 '100% Fiber Optic',
                 'Harga Sudah Termasuk Pajak / PPN 11%'
-            ]
+            ],
+            'delay' => 400
         ],
         [
             'title' => "DHAHA PRIMA FIBER 50 Mbps",
@@ -78,7 +81,8 @@ class PageController extends Controller
                 'IP Dinamis',
                 '100% Fiber Optic',
                 'Harga Sudah Termasuk Pajak / PPN 11%'
-            ]
+            ],
+            'delay' => 0
         ],
         [
             'title' => "DHAHA PRIMA FIBER 75 Mbps",
@@ -96,7 +100,8 @@ class PageController extends Controller
                 'IP Dinamis',
                 '100% Fiber Optic',
                 'Harga Sudah Termasuk Pajak / PPN 11%'
-            ]
+            ],
+            'delay' => 200
         ],
         [
             'title' => "DHAHA PRIMA 100 Mbps",
@@ -114,11 +119,12 @@ class PageController extends Controller
                 'IP Dinamis',
                 '100% Fiber Optic',
                 'Harga Sudah Termasuk Pajak / PPN 11%'
-            ]
+            ],
+            'delay' => 400
         ],
         [
             'title' => "DHAHA PRIMA CORPORATE",
-            'desc' => 'Biaya Registrasi & Instalasi Rp. Hubungi CS / Sales & Marketing Bosti',
+            'desc' => 'Biaya Registrasi & Instalasi Rp. Hubungi CS / Sales & Marketing PT Dhaha Prima Net',
             'price_arr' => [
                 'rp' => "Rp.",
                 'price' => "Hubungi CS",
@@ -132,11 +138,12 @@ class PageController extends Controller
                 'IP Dinamis',
                 '100% Fiber Optic',
                 'Harga Sudah Termasuk Pajak / PPN 11%'
-            ]
+            ],
+            'delay' => 0
         ],
         [
             'title' => "DHAHA PRIMA HOSPITALITY MS",
-            'desc' => 'Biaya Registrasi & Instalasi Rp. Hubungi CS / Sales & Marketing Bosti',
+            'desc' => 'Biaya Registrasi & Instalasi Rp. Hubungi CS / Sales & Marketing PT Dhaha Prima Net',
             'price_arr' => [
                 'rp' => "Rp.",
                 'price' => "Hubungi CS",
@@ -150,11 +157,12 @@ class PageController extends Controller
                 'IP Dinamis',
                 '100% Fiber Optic',
                 'Harga Sudah Termasuk Pajak / PPN 11%'
-            ]
+            ],
+            'delay' => 200
         ],
         [
             'title' => "DHAHA PRIMA Metro-E & V-SAT",
-            'desc' => 'Biaya Registrasi & Instalasi Rp. Hubungi CS / Sales & Marketing Bosti',
+            'desc' => 'Biaya Registrasi & Instalasi Rp. Hubungi CS / Sales & Marketing PT Dhaha Prima Net',
             'price_arr' => [
                 'rp' => "Rp.",
                 'price' => "Hubungi CS",
@@ -168,38 +176,122 @@ class PageController extends Controller
                 'IP Dinamis',
                 '100% Fiber Optic',
                 'Harga Sudah Termasuk Pajak / PPN 11%'
-            ]
+            ],
+            'delay' => 400
         ],
     ];
 
     protected $reviewCards = [
         [
-            'text' => '"Layanan BOSTI FIBER yang ada dirumah kami sungguh sangat memuaskan, akses ke berbagai macam situs baik itu sosial media, streaming video dan bermain game sangat lancar. kecepatan download dan upload sesuai paket layanan, kami sekeluarga puas menggunakan layanan BOSTI FIBER."',
+            'text' => '"Layanan DHAHAPRIMA FIBER yang ada dirumah kami sungguh sangat memuaskan, akses ke berbagai macam situs baik itu sosial media, streaming video dan bermain game sangat lancar. kecepatan download dan upload sesuai paket layanan, kami sekeluarga puas menggunakan layanan DHAHAPRIMA FIBER."',
             'name' => 'Muhammad Pratama Aditya',
             'job' => "Gamer's (Pelanggan Rumahan)"
         ],
         [
-            'text' => '"Pengalaman yang sangat berkesan ketika berkonsultasi dengan tenaga ahli dari BOSTI untuk memberikan solusi terkait permasalahan jaringan di kantor kami, informasi terkait kendala yang di jelaskan kepada kami sangat jelas, solusi serta penanganan sangat penuh perhitungan, cepat dan efektif."',
+            'text' => '"Pengalaman yang sangat berkesan ketika berkonsultasi dengan tenaga ahli dari DHAHAPRIMA untuk memberikan solusi terkait permasalahan jaringan di kantor kami, informasi terkait kendala yang di jelaskan kepada kami sangat jelas, solusi serta penanganan sangat penuh perhitungan, cepat dan efektif."',
             'name' => 'Sindu Aryasatya',
             'job' => "STAFF IT (Pelanggan IT Consult & Service)"
         ],
         [
-            'text' => '"Sebelumnya keluhan terkait internet yang tersedia sebagai fasilitas untuk tamu hotel kami sangat tinggi karena kendala teknis, Alhamdulillah sekarang kami menggunakan Layanan BOSTI HOSPITALITY MANAGED SERVICE keluhan pelanggan menurun drastis bahkan nyaris tanpa keluhan."',
+            'text' => '"Sebelumnya keluhan terkait internet yang tersedia sebagai fasilitas untuk tamu hotel kami sangat tinggi karena kendala teknis, Alhamdulillah sekarang kami menggunakan Layanan DHAHAPRIMA HOSPITALITY MANAGED SERVICE keluhan pelanggan menurun drastis bahkan nyaris tanpa keluhan."',
             'name' => 'Indra Prayoga',
             'job' => "GM HOTEL (Pelanggan Hospitality)"
         ],
         [
-            'text' => '"Perusahaan kami bergerak dalam industri retail, kami mengandalkan stabilitas dan kecepatan akses layanan internet untuk menunjang kebutuhan telekomunikasi juga kebutuhan transfer data antar cabang dan kantor pusat, sejauh ini sangat baik pelayanan BOSTI CORPORATE."',
+            'text' => '"Perusahaan kami bergerak dalam industri retail, kami mengandalkan stabilitas dan kecepatan akses layanan internet untuk menunjang kebutuhan telekomunikasi juga kebutuhan transfer data antar cabang dan kantor pusat, sejauh ini sangat baik pelayanan DHAHAPRIMA CORPORATE."',
             'name' => 'Evan Setiyawan',
             'job' => "CEO & FOUNDER (Pelanggan Corporate)"
         ],
     ];
 
+    protected $serviceCards_1 = [
+        [
+            'icon' => 'assets/images/router-yellow.svg',
+            'title' => 'DHAHA PRIMA FIBER',
+            'desc' => ' Dengan teknologi 100% optical network akses
+            internet dirumah anda secepat cahaya!
+            Layanan yang DHAHA PRIMA FIBER distribuskan
+            kerumah anda Tanpa Batasan Kuota (FUP) anda
+            tidak perlu khawatir kecepatan akses menurun
+            karena Batasan Kuota yang terlampaui,
+            kestabilan di atas rata-rata dengan dukungan
+            jaringan fully redundant network kami yang
+            terhubung ke p enyedia layanan terkemuka di
+            dunia seperti Google, META, CloudFlare, AWS,
+            ZenLayer, ByteDance dan lain sebagainya
+            menjadikan kegiatan digital di rumah anda
+            menjadi lebih cepat, stabil, aman dan
+            nyaman. Streaming Video tanpa Buffering,
+            Akses dan Scroll Sosial Media tanpa
+            hambatan, Meeting dan Belajar Online tanpa
+            kendala, Belanja ataupun Transaksi secara
+            Online dengan aman, bermain GAME tanpa
+            gangguan atau jeda, anti lag dan anti jitter
+            dengan latensi rendah. Berkegiatan digital
+            di rumah tanpa kekhawatiran dengan DHAHA
+            PRIMA FIBER.'
+        ],
+        [
+            'icon' => 'assets/images/bank-yellow.svg',
+            'title' => 'DHAHA PRIMA CORPORATE',
+            'desc' => 'Layanan akses internet berdedikasi untuk
+            kebutuhan perkantoran dan berbagai macam
+            industri skala menengah keatas yang
+            membutuhkan konektivitas eksklusif, dengan
+            dedicated bandwidth atau committed
+            bandwidth. DHAHA PRIMA CORPORATE menyediakan
+            bandwidth dengan sumber daya khusus CIR
+            (Committed Information Rate) 1:1 yang
+            dialokasikan dan diperuntukkan hanya untuk 1
+            pelanggan dengan kecepatan transmisi data
+            yang tinggi, stabil konsisten tanpa
+            fluktuasi serta garansi ketersediaan
+            jaringan dengan SLA (Service Level
+            Agreement) 99,8%. DHAHA PRIMA CORPORATE
+            didistribusikan melalui minimal 2 jalur
+            eksklusif (Redundant Link) pada backbone &
+            last mile sehingga dalam waktu yang sangat
+            singkat bilamana terjadi gangguan pada salah
+            satu jalur distribusi layanan, dengan cepat
+            akan digantikan oleh distribusi dari jalur
+            lainnya agar layanan tetap tersedia secara
+            optimal di sisi pengguna layanan DHAHA PRIMA
+            CORPORATE.'
+        ],
+        [
+            'icon' => 'assets/images/base-station-yellow.svg',
+            'title' => 'DHAHA PRIMA HOSPITALITY',
+            'desc' => 'Sebagai perusahaan yang memiliki produk
+            unggulan Managed Service Provider
+            Hospitality / Perhotelan, DHAHA PRIMA
+            HOSPITALITY MANAGED SERVICE memberikan
+            optimasi layanan akses internet, penyediaan
+            serta pengelolaan sumber daya informasi dan
+            teknologi baik berupa perangkat lunak dan
+            perangkat keras (software & hardware),
+            beserta sumber daya manusia yang dibutuhkan
+            ataupun memberikan edukasi kepada sumber
+            daya manusia yang sudah dimiliki oleh
+            pengguna layanan. DHAHA PRIMA HOSPITALITY
+            MANAGED SERVICE didukung oleh tenaga ahli
+            bersertifikasi profesional dan menggunakan
+            perangkat keras jaringan telekomunikasi
+            internet kelas dunia seperti JUNIPER, CISCO,
+            ARUBA, RUIJIE, UBIQUITY dan lain sebagainya
+            untuk menjamin layanan yang kami berikan
+            adalah layanan terbaik untuk tamu dan
+            customer hotel pengguna layanan DHAHA PRIMA
+            HOSPITALITY MANAGED SERVICE.'
+        ],
+    ];
+
+
     public function index()
     {
         return view("index", [
             'priceCards' => $this->priceCards,
-            'reviewCards' => $this->reviewCards
+            'reviewCards' => $this->reviewCards,
+            'serviceCards_1' => $this->serviceCards_1
         ]);
     }
 }

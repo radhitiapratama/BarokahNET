@@ -37,6 +37,65 @@
         @apply box-border;
     }
 
+    .loader {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        position: relative;
+        animation: rotate 1s linear infinite
+    }
+
+    .loader::before,
+    .loader::after {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        inset: 0px;
+        border-radius: 50%;
+        border: 5px solid #FECC00;
+        animation: prixClipFix 2s linear infinite;
+    }
+
+    .loader::after {
+        inset: 8px;
+        transform: rotate3d(90, 90, 0, 180deg);
+        border-color: #333333;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg)
+        }
+
+        100% {
+            transform: rotate(360deg)
+        }
+    }
+
+    @keyframes prixClipFix {
+        0% {
+            clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0)
+        }
+
+        50% {
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0)
+        }
+
+        75%,
+        100% {
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)
+        }
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .remove-loader {
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+
     .card-service {
         transition: all 300ms;
         cursor: pointer;
@@ -59,12 +118,27 @@
         width: 0;
         height: 1px;
         transition: 300ms;
-        bottom: -4px;
+        bottom: -5px;
         left: 0;
         background-color: #FECC00;
     }
 
     .anchor-link:hover::after {
         width: 100%;
+    }
+
+    @media (max-width: 767px) {
+        .menu {
+            transition: all;
+            transition-duration: 300ms;
+            transition-timing-function: ease-in-out;
+            opacity: 0;
+            top: -400px;
+        }
+
+        .menu.active {
+            top: 100px;
+            opacity: 1;
+        }
     }
 }

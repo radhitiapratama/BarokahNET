@@ -11,78 +11,104 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
 <body>
-    <nav class="fixed top-0 z-[100] h-[100px] w-screen border-b-[1px] border-default-border-color bg-white p-0">
-        <div class="container mx-auto flex h-full flex-wrap px-5 py-[24px] sm:px-10">
-            <img src="{{ asset('assets/images/logo.png') }}" alt="logo" class="object-contain w-40 h-full" />
-            <ul class="ml-auto hidden w-[40%] flex-1 flex-wrap items-center justify-end gap-[65px] md:flex">
-                <li>
-                    <a href="#"
+    {{-- Loader --}}
+    <div id="loader-wrapper"
+        class="fixed z-[200] flex items-center justify-center w-screen h-screen  bg-white transition-all ease-in-out duration-500">
+        <div class="loader"></div>
+    </div>
+
+    {{-- Navbar --}}
+    <nav class="fixed top-0 z-[100] h-[100px] w-screen border-b-[1px] border-default-border-color bg-white">
+        <div class="container static flex flex-wrap items-center h-full mx-auto md:px-16">
+            <div class="static h-full px-5">
+                <img src="{{ asset('assets/images/logo.png') }}" alt="logo"
+                    class="object-contain w-32 h-full md:w-40" />
+            </div>
+            <ul
+                class="absolute gap-y-7 px-5 flex flex-col flex-wrap py-6 bg-white w-full md:ml-auto md:w-[60%] md:static md:flex-row md:items-center md:justify-end md:gap-7 md:flex menu z-[-1] md:z-10">
+                <li class="menu-item">
+                    <a href="#beranda"
                         class="relative font-medium after:absolute after:bottom-[-5px] after:left-0 after:h-[2px] after:w-0 after:rounded-md after:bg-primary after:transition-all after:duration-300 after:content-[''] hover:after:w-full">
                         Beranda
                     </a>
                 </li>
-                <li>
-                    <a href="#"
+                <li class="menu-item">
+                    <a href="#profile"
                         class="after:transition-all relative font-medium after:absolute after:bottom-[-5px] after:left-0 after:h-[2px] after:w-0 after:rounded-md after:bg-primary after:duration-300 after:content-[''] hover:after:w-full">
-                        Testimoni
+                        Profile
                     </a>
                 </li>
-                <li>
-                    <a href="#"
+                <li class="menu-item">
+                    <a href="#produk"
                         class="relative font-medium after:absolute after:bottom-[-5px] after:left-0 after:h-[2px] after:w-0 after:rounded-md after:bg-primary after:transition-all after:duration-300 after:content-[''] hover:after:w-full">
-                        Layanan
+                        Produk
                     </a>
                 </li>
-                <li>
-                    <a href="#"
+                <li class="menu-item">
+                    <a href="#kontak"
                         class="relative font-medium after:absolute after:bottom-[-5px] after:left-0 after:h-[2px] after:w-0 after:rounded-md after:bg-primary after:transition-all after:duration-300 after:content-[''] hover:after:w-full">
                         Kontak
                     </a>
                 </li>
             </ul>
+            <div class="grid w-8 h-8 ml-auto mr-5 place-items-center md:hidden" onclick="toggleNavbar(event)">
+                <i class="ri-menu-line ri-xl"></i>
+            </div>
         </div>
     </nav>
 
-    <section id="beranda"
-        class="mt-[100px] h-max w-full relative  sm:bg-none bg-contain bg-center bg-no-repeat pb-[100px]">
+    <section id="beranda" class="h-max w-full relative sm:bg-none bg-contain bg-center bg-no-repeat pb-[100px]">
+        {{-- Background Mobile,Tablet --}}
         <div
-            class="absolute top-0 bottom-0 left-0 right-0 lg:hidden bg-[url('/public/assets/images/connected_wordl.svg')] bg-contain sm:bg-[center_top_8rem] md:bg-top bg-no-repeat">
+            class="absolute top-0 bottom-0 left-0 right-0 xl:hidden bg-[url('/public/assets/images/connected_wordl.svg')] bg-contain bg-[center_top_4rem] md:bg-top bg-no-repeat">
         </div>
-        <div class="absolute top-0 bottom-0 z-10 w-full h-full bg-white opacity-90">
+
+        {{-- Background Laptop,Desktop --}}
+        <div
+            class="absolute top-0 bottom-0 left-0 right-0  bg-[url('/public/assets/images/hero-section-pattern.svg')] bg-contain sm:bg-[center_top_8rem] hidden xl:inline md:bg-top bg-no-repeat">
         </div>
-        <div class="container relative z-20 flex flex-wrap h-full p-5 mx-auto md:p-16 gap-y-8">
+
+        <div class="absolute top-0 bottom-0 z-10 w-full h-full bg-white xl:hidden opacity-90">
+        </div>
+
+        <div
+            class="container relative z-20 flex flex-wrap h-full p-5 mx-auto lg:p-16 pt-[120px] md:pt-[130px] lg:pt-[150px] gap-y-8">
             <div class="flex flex-col justify-center lg:w-[50%] w-full">
-                <p class="mb-2 text-xl font-normal text-gray-500 md:text-2xl lg:text-3xl ">
+                <p data-aos="fade-right" data-aos-delay="800"
+                    class="mb-2 text-xl font-semibold text-gray-500 md:text-2xl lg:text-3xl ">
                     PT DHAHA PRIMA NET
                 </p>
-                <h1 class="text-2xl font-bold lg:text-5xl md:text-3xl lg:leading-[60px]">
+                <h1 data-aos="fade-right" data-aos-delay="900"
+                    class="text-2xl font-bold leading-8 md:leading-10 lg:text-[48px] lg:leading-[58px] lg:text-4xl md:text-3xl">
                     Solusi Layanan Akses Internet Terbaik Di Kelasnya
                 </h1>
-                <p class="my-4 mb-6 text-[16px] font-normal">
+                <p data-aos="fade-right" data-aos-delay="1000" class="my-4 mb-6 text-[16px] font-normal">
                     Nikmati layanan akses internet fiber optic berkecapatan
                     tinggi dengan nyaman, aman & stabilitas di atas
                     rata-rata. Mulai Dari: Rp. 165.000 / Bulan
                 </p>
-                <a href="#kontak"
-                    class="px-8 py-3 text-sm font-medium tracking-wide uppercase rounded-full md:text-lg w-max bg-primary">
+                <a data-aos="fade-right" data-aos-delay="1100" href="https://wa.me/6281335964620" target="_blank"
+                    class="px-8 py-3 text-sm font-medium tracking-wide text-white uppercase rounded-full w-max bg-primary">
                     Daftar Sekarang
                 </a>
             </div>
-            <div class="flex items-center justify-end w-full lg:w-[35%] ml-24">
+            <div class="flex items-center justify-end w-full lg:w-[35%] ml-24" data-aos="fade-up" data-aos-delay="900">
                 <img src="{{ asset('assets/images/connected_wordl.svg') }}" alt="background world"
                     class="w-0 lg:w-full" />
             </div>
         </div>
     </section>
 
-    <section class="bg-semi-sky-blue">
+    <section class="bg-white">
         <div class="container relative mx-auto p-[18px] md:p-[50px]">
             <img src="{{ asset('assets/images/circle.svg') }}" alt="circle"
                 class="absolute top-[-50px] w-[100px] z-10" />
-            <div
+
+            <div id="profile" data-aos="fade-up" data-aos-delay="1200"
                 class="m-auto mt-[-120px] flex h-full min-h-[230px] w-full max-w-[900px] flex-col items-center justify-center rounded-bl-[50px] rounded-br rounded-tl rounded-tr-[50px] bg-secondary p-7 lg:px-[100px] text-white relative z-20">
                 <p class="mb-4 text-lg font-bold lg:text-2xl">
                     "Dhaha Prima Hadir Menjangkau Seluruh Negeri"
@@ -100,166 +126,64 @@
                 </p>
             </div>
 
-            <div class="mt-[80px] flex flex-col gap-[20px]">
-                <div class="min-h-[50px] w-full rounded bg-white" data-aos="fade-up">
-                    <div class="header flex border-b-[1px] border-default-border-color px-[28px] py-5">
-                        <div class="flex gap-2">
-                            <div class="red h-[20px] w-[20px] rounded-full bg-red-circle"></div>
-                            <div class="red h-[20px] w-[20px] rounded-full bg-yellow-circle"></div>
-                            <div class="red h-[20px] w-[20px] rounded-full bg-green-circle"></div>
-                        </div>
-                    </div>
-
-                    <div class="body flex flex-wrap px-[28px] py-[35px]">
-                        <div class="mb-5 flex w-full items-center justify-center md:mb-0 md:w-[25%]">
-                            <div class="flex h-[180px] w-[250px] items-center justify-center rounded-lg bg-secondary">
-                                <img src="{{ asset('assets/images/router-yellow.svg') }}" alt="icon" />
+            {{-- <div class="mt-[80px] flex flex-col gap-[20px]">
+                @foreach ($serviceCards_1 as $card)
+                    <div class="min-h-[50px] w-full rounded bg-white" data-aos="fade-up">
+                        <div class="header flex border-b-[1px] border-default-border-color px-[28px] py-5">
+                            <div class="flex gap-2">
+                                <div class="red h-[20px] w-[20px] rounded-full bg-red-circle"></div>
+                                <div class="red h-[20px] w-[20px] rounded-full bg-yellow-circle"></div>
+                                <div class="red h-[20px] w-[20px] rounded-full bg-green-circle"></div>
                             </div>
                         </div>
-                        <div class="w-full md:w-[75%] md:pl-6 lg:pl-7">
-                            <p class="mb-2 text-center text-[28px] font-bold md:text-start">
-                                DHAHA PRIMA FIBER
-                            </p>
-                            <p class="text-[11px] leading-[22px]">
-                                Dengan teknologi 100% optical network akses
-                                internet dirumah anda secepat cahaya!
-                                Layanan yang DHAHA PRIMA FIBER distribuskan
-                                kerumah anda Tanpa Batasan Kuota (FUP) anda
-                                tidak perlu khawatir kecepatan akses menurun
-                                karena Batasan Kuota yang terlampaui,
-                                kestabilan di atas rata-rata dengan dukungan
-                                jaringan fully redundant network kami yang
-                                terhubung ke p enyedia layanan terkemuka di
-                                dunia seperti Google, META, CloudFlare, AWS,
-                                ZenLayer, ByteDance dan lain sebagainya
-                                menjadikan kegiatan digital di rumah anda
-                                menjadi lebih cepat, stabil, aman dan
-                                nyaman. Streaming Video tanpa Buffering,
-                                Akses dan Scroll Sosial Media tanpa
-                                hambatan, Meeting dan Belajar Online tanpa
-                                kendala, Belanja ataupun Transaksi secara
-                                Online dengan aman, bermain GAME tanpa
-                                gangguan atau jeda, anti lag dan anti jitter
-                                dengan latensi rendah. Berkegiatan digital
-                                di rumah tanpa kekhawatiran dengan DHAHA
-                                PRIMA FIBER.
-                            </p>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="min-h-[50px] w-full rounded bg-white" data-aos="fade-up">
-                    <div class="header flex border-b-[1px] border-default-border-color px-[28px] py-5">
-                        <div class="flex gap-2">
-                            <div class="red h-[20px] w-[20px] rounded-full bg-red-circle"></div>
-                            <div class="red h-[20px] w-[20px] rounded-full bg-yellow-circle"></div>
-                            <div class="red h-[20px] w-[20px] rounded-full bg-green-circle"></div>
-                        </div>
-                    </div>
-
-                    <div class="body flex flex-wrap px-[28px] py-[35px]">
-                        <div class="mb-5 flex w-full items-center justify-center md:mb-0 md:w-[25%]">
-                            <div class="flex h-[180px] w-[250px] items-center justify-center rounded-lg bg-secondary">
-                                <img src="{{ asset('assets/images/bank-yellow.svg') }}" alt="icon" />
+                        <div class="body flex flex-wrap px-[28px] py-[35px]">
+                            <div class="mb-5 flex w-full items-center justify-center md:mb-0 md:w-[25%]">
+                                <div
+                                    class="flex h-[180px] w-[250px] items-center justify-center rounded-lg bg-secondary">
+                                    <img src="{{ asset($card['icon']) }}" alt="icon" />
+                                </div>
+                            </div>
+                            <div class="w-full md:w-[75%] md:pl-6 lg:pl-7">
+                                <p class="mb-2 text-center text-[28px] font-bold md:text-start">
+                                    {{ $card['title'] }}
+                                </p>
+                                <p class="text-[11px] leading-[22px]">
+                                    {{ $card['desc'] }}
+                                </p>
                             </div>
                         </div>
-                        <div class="w-full md:w-[75%] md:pl-6 lg:pl-7">
-                            <p class="mb-2 text-center text-[28px] font-bold md:text-start">
-                                DHAHA PRIMA CORPORATE
-                            </p>
-                            <p class="text-[11px] leading-[22px]">
-                                Layanan akses internet berdedikasi untuk
-                                kebutuhan perkantoran dan berbagai macam
-                                industri skala menengah keatas yang
-                                membutuhkan konektivitas eksklusif, dengan
-                                dedicated bandwidth atau committed
-                                bandwidth. DHAHA PRIMA CORPORATE menyediakan
-                                bandwidth dengan sumber daya khusus CIR
-                                (Committed Information Rate) 1:1 yang
-                                dialokasikan dan diperuntukkan hanya untuk 1
-                                pelanggan dengan kecepatan transmisi data
-                                yang tinggi, stabil konsisten tanpa
-                                fluktuasi serta garansi ketersediaan
-                                jaringan dengan SLA (Service Level
-                                Agreement) 99,8%. DHAHA PRIMA CORPORATE
-                                didistribusikan melalui minimal 2 jalur
-                                eksklusif (Redundant Link) pada backbone &
-                                last mile sehingga dalam waktu yang sangat
-                                singkat bilamana terjadi gangguan pada salah
-                                satu jalur distribusi layanan, dengan cepat
-                                akan digantikan oleh distribusi dari jalur
-                                lainnya agar layanan tetap tersedia secara
-                                optimal di sisi pengguna layanan DHAHA PRIMA
-                                CORPORATE.
-                            </p>
-                        </div>
                     </div>
-                </div>
-
-                <div class="min-h-[50px] w-full rounded bg-white" data-aos="fade-up">
-                    <div class="header flex border-b-[1px] border-default-border-color px-[28px] py-5">
-                        <div class="flex gap-2">
-                            <div class="red h-[20px] w-[20px] rounded-full bg-red-circle"></div>
-                            <div class="red h-[20px] w-[20px] rounded-full bg-yellow-circle"></div>
-                            <div class="red h-[20px] w-[20px] rounded-full bg-green-circle"></div>
-                        </div>
-                    </div>
-
-                    <div class="body flex flex-wrap px-[28px] py-[35px]">
-                        <div class="mb-5 flex w-full items-center justify-center md:mb-0 md:w-[25%]">
-                            <div class="flex h-[180px] w-[250px] items-center justify-center rounded-lg bg-secondary">
-                                <img src="{{ asset('assets/images/base-station-yellow.svg') }}" alt="icon" />
-                            </div>
-                        </div>
-                        <div class="w-full md:w-[75%] md:pl-6 lg:pl-7">
-                            <p class="mb-2 text-center text-[28px] font-bold md:text-start">
-                                DHAHA PRIMA HOSPITALITY
-                            </p>
-                            <p class="text-[11px] leading-[22px]">
-                                Sebagai perusahaan yang memiliki produk
-                                unggulan Managed Service Provider
-                                Hospitality / Perhotelan, DHAHA PRIMA
-                                HOSPITALITY MANAGED SERVICE memberikan
-                                optimasi layanan akses internet, penyediaan
-                                serta pengelolaan sumber daya informasi dan
-                                teknologi baik berupa perangkat lunak dan
-                                perangkat keras (software & hardware),
-                                beserta sumber daya manusia yang dibutuhkan
-                                ataupun memberikan edukasi kepada sumber
-                                daya manusia yang sudah dimiliki oleh
-                                pengguna layanan. DHAHA PRIMA HOSPITALITY
-                                MANAGED SERVICE didukung oleh tenaga ahli
-                                bersertifikasi profesional dan menggunakan
-                                perangkat keras jaringan telekomunikasi
-                                internet kelas dunia seperti JUNIPER, CISCO,
-                                ARUBA, RUIJIE, UBIQUITY dan lain sebagainya
-                                untuk menjamin layanan yang kami berikan
-                                adalah layanan terbaik untuk tamu dan
-                                customer hotel pengguna layanan DHAHA PRIMA
-                                HOSPITALITY MANAGED SERVICE.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                @endforeach
+            </div> --}}
         </div>
     </section>
 
     <section class="lg:py-[70px] py-10 relative overflow-hidden">
-        <div class="container relative flex flex-wrap gap-5 p-5 mx-auto mb-10 overflow-visible lg:p-5 lg:px-20">
+        <div
+            class="container relative flex flex-wrap p-5 mx-auto mb-10 overflow-visible gap-x-5 gap-y-10 lg:py-5 lg:px-20">
+
             <div
-                class="w-[350px] h-[350px] bg-primary rounded-full absolute top-[-200px] left-[-200px] blur-[150px] z-[-1]">
+                class="w-[350px] h-[350px] bg-primary rounded-full absolute top-[-200px] right-[-200px] blur-[0] z-[-1]">
             </div>
+
+            <div
+                class="w-[350px] h-[350px] bg-primary rounded-full absolute bottom-[-320px] left-[-150px] blur-[0] z-[-1]">
+            </div>
+
             <div class="flex w-full items-center justify-center lg:w-[40%] ">
                 <img src="{{ asset('assets/images/undraw_working_late_re_0c3y.svg') }}" alt="image"
-                    class="w-[250px]">
+                    class="w-[300px] md:w-[350px]">
             </div>
-            <div class="flex flex-col flex-1  w-[60%] ">
-                <p class="lg:text-4xl lg:leading-[52px] text-xl leading-8 font-bold mb-4">Mau Berlangganan Internet di
+
+            <div class="flex flex-col w-full lg:w-[55%] ">
+                <p class="lg:text-4xl lg:leading-[52px] text-xl md:text-center lg:text-start leading-8 font-bold mb-4">
+                    Mau Berlangganan
+                    Internet di
                     Rumah?
                     #DHAHAPRIMAinAJA
                 </p>
-                <p class="mb-6 text-xs leading-6 lg:text-sm">Era digital memberikan banyak kemudahan dalam
+                <p class="mb-6 text-xs leading-6 md:leading-7 md:text-sm">Era digital memberikan banyak kemudahan dalam
                     beraktivitas
                     sehari-hari,
                     seperti
@@ -270,43 +194,42 @@
                     package yang bisa disesuaikan dengan kebutuhan. Memanjakan dan memberikan pengalaman terbaik kepada
                     setiap pengguna layanan Internet DHAHA PRIMA FIBER dalam kegiatan digital di Rumah 24 jam tanpa
                     perlu khawatir.</p>
-                <div class="flex flex-col mb-4 lg:flex-row gap-y-4">
+                <div class="flex flex-col mb-4 md:flex-row gap-y-4">
                     <div class="flex items-center flex-1 gap-2">
                         <img src="{{ asset('assets/images/circle-checklist.svg') }}" alt="checklist" class="w-7 h-7">
                         <p class="text-sm font-semibold">UPLOAD & DOWNLOAD SIMETRIS 1:1</p>
                     </div>
                     <div class="flex items-center flex-1 gap-2">
-                        <img src="{{ asset('assets/images/circle-checklist.svg') }}" alt="checklist"
-                            class="w-7 h-7">
+                        <img src="{{ asset('assets/images/circle-checklist.svg') }}" alt="checklist" class="w-7 h-7">
                         <p class="text-sm font-semibold">UNLIMITED TANPA KUOTA / FUP</p>
                     </div>
                 </div>
-                <div class="flex flex-col mb-4 lg:flex-row gap-y-4">
+                <div class="flex flex-col mb-4 md:flex-row gap-y-4">
                     <div class="flex items-center flex-1 gap-2">
-                        <img src="{{ asset('assets/images/circle-checklist.svg') }}" alt="checklist"
-                            class="w-7 h-7">
+                        <img src="{{ asset('assets/images/circle-checklist.svg') }}" alt="checklist" class="w-7 h-7">
                         <p class="text-sm font-semibold">24 JAM CUSTOMER SERVICE</p>
                     </div>
                     <div class="flex items-center flex-1 gap-2">
-                        <img src="{{ asset('assets/images/circle-checklist.svg') }}" alt="checklist"
-                            class="w-7 h-7">
+                        <img src="{{ asset('assets/images/circle-checklist.svg') }}" alt="checklist" class="w-7 h-7">
                         <p class="text-sm font-semibold">100% OPTICAL NETWORK</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div
+        {{-- <div
             class="container relative flex flex-wrap-reverse gap-5 p-5 mx-auto mb-10 overflow-visible lg:p-5 lg:px-20">
             <img src="{{ asset('assets/images/multiple-circle-bg-secondary.svg') }}" alt="icon"
                 class="absolute w-[100px] right-[-40px] top-0">
 
             <div class="flex flex-col flex-1 relative z-10 w-full lg:w-[60%]">
-                <p class="lg:text-4xl lg:leading-[52px] leading-8 text-xl font-bold mb-4">Konektivitas Internet
+                <p class="lg:text-4xl lg:leading-[52px] leading-8 text-xl font-bold mb-4 md:text-center lg:text-start">
+                    Konektivitas Internet
                     Perhotelan
                     Kekinian
                 </p>
-                <p class="mb-6 text-xs leading-6 lg:text-sm">DHAHA PRIMA HOSPITALITY MANAGED SERVICE memberikan solusi
+                <p class="mb-6 text-xs leading-6 md:leading-7 md:text-sm">DHAHA PRIMA HOSPITALITY MANAGED SERVICE
+                    memberikan solusi
                     tepat guna
                     yang dapat disesuaikan dan aman untuk memenuhi kebutuhaan serta harapan staf dan tamu akan
                     konektivitas internet perhotelan yang kekinian. dengan kemampuan menjaga kualitas layanan tetap
@@ -315,7 +238,7 @@
                     HOSPITALITY MANAGED SERVICE memiliki jam terbang tinggi serta pengalaman panjang bertahun-tahun dan
                     didukung oleh tenaga ahli bersertifikasi profesional untuk memberikan solusi terbaik konektivitas
                     internet perhotelan kekinian.</p>
-                <div class="flex flex-col mb-4 lg:flex-row gap-y-4">
+                <div class="flex flex-col mb-4 md:flex-row gap-y-4">
                     <div class="flex items-center flex-1 gap-2">
                         <img src="{{ asset('assets/images/circle-checklist.svg') }}" alt="checklist"
                             class="w-7 h-7">
@@ -327,7 +250,7 @@
                         <p class="text-sm font-semibold">HANDAL & HEMAT BIAYA</p>
                     </div>
                 </div>
-                <div class="flex flex-col mb-4 lg:flex-row gap-y-4">
+                <div class="flex flex-col mb-4 md:flex-row gap-y-4">
                     <div class="flex items-center flex-1 gap-2">
                         <img src="{{ asset('assets/images/circle-checklist.svg') }}" alt="checklist"
                             class="w-7 h-7">
@@ -344,11 +267,10 @@
                 <img src="{{ asset('assets/images/best_place.svg') }}" alt="image"
                     class="w-[280px] md:w-[350px]">
             </div>
-        </div>
+        </div> --}}
     </section>
 
-
-    <section class="bg-secondary">
+    {{-- <section class="bg-secondary">
         <div
             class="container flex flex-wrap items-center justify-center px-4 mx-auto text-white lg:px-10 lg:justify-center py-14 gap-y-4 gap-x-4">
 
@@ -400,11 +322,10 @@
                 </div>
             </div>
         </div>
-    </section>
-
+    </section> --}}
 
     {{-- Service Section --}}
-    <section class="bg-semi-sky-blue">
+    {{-- <section class="bg-semi-sky-blue">
         <div class="container px-5 py-20 mx-auto lg:py-20 lg:px-20">
             <p class="text-2xl font-semibold text-start md:text-center lg:text-4xl">Kami Persembahkan Beberapa Layanan
                 Unggulan</p>
@@ -416,7 +337,6 @@
                 dan tepat guna.</p>
 
             <div class="flex flex-wrap items-center justify-center mt-10 lg:mt-20 gap-y-12 gap-x-5 lg:justify-evenly">
-                {{-- Card Service 1 --}}
                 <div class="card-service max-w-[350px] w-full min-h-[400px] h-full bg-white rounded p-10"
                     data-aos="fade-up">
                     <div class="w-[80px] h-[80px] flex items-center justify-center bg-bg-box-cyan-transparent rounded">
@@ -430,7 +350,6 @@
                         layanan Internet Broadband dan Layanan Internet Dedicated untuk pengguna rumahan ataupun
                         kebutuhan berbagai macam industri</p>
                 </div>
-                {{-- Card Service 2 --}}
                 <div data-aos="fade-up" data-aos-delay="200"
                     class="card-service max-w-[350px] w-full min-h-[400px] h-full bg-white rounded p-10">
                     <div
@@ -443,7 +362,6 @@
                         lainnya seperti router, switch dan sebagainya pada fasilitas Datacenter yang kami kelola di
                         berbagai daerah.</p>
                 </div>
-                {{-- Card Service 3 --}}
                 <div data-aos="fade-up" data-aos-delay="400"
                     class="card-service max-w-[350px] w-full min-h-[400px] h-full bg-white rounded p-10">
                     <div class="w-[80px] h-[80px] flex items-center justify-center bg-bg-box-blue-transparent rounded">
@@ -454,7 +372,6 @@
                         berupa layanan konektivitas internet, pemantauan serta pengelolaan jaringan di berbagai macam
                         indsutri secara end-to-end pada network device maupun carriage dengan proaktif dan realtime.</p>
                 </div>
-                {{-- Card Service 4 --}}
                 <div data-aos="fade-up" data-aos-delay="600"
                     class="card-service max-w-[350px] w-full min-h-[400px] h-full bg-white rounded p-10">
                     <div class="w-[80px] h-[80px] flex items-center justify-center bg-bg-box-blue-transparent rounded">
@@ -466,7 +383,6 @@
                         kantor pusat serta beberapa kantor cabang untuk dapat di hubungkan melalui Layanan METRO-E, VPN
                         & V-SAT.</p>
                 </div>
-                {{-- Card Service 5 --}}
                 <div data-aos="fade-up" data-aos-delay="800"
                     class="card-service max-w-[350px] w-full min-h-[400px] h-full bg-white rounded p-10">
                     <div
@@ -479,7 +395,6 @@
                         eksklusif yang bisa di akses secara realtime dengan keamanan tingkat tinggi dan terjamin
                         kerahasiaannya.</p>
                 </div>
-                {{-- Card Service 6 --}}
                 <div data-aos="fade-up" data-aos-delay="1000"
                     class="card-service max-w-[350px] w-full min-h-[400px] h-full bg-white rounded p-10">
                     <div
@@ -493,10 +408,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     {{-- Company use our service --}}
-    <section>
+    {{-- <section>
         <div class="container relative p-5 mx-auto overflow-hidden py-14 lg:p-20">
             <div class="circle-1 w-[500px] h-[85px] bg-primary blur-[180px] z-[-1] rotate-45 absolute left-0 top-52">
             </div>
@@ -505,7 +420,6 @@
                 class="circle-1 w-[400px] h-[85px] bg-primary blur-[180px] z-[-1] rotate-[130deg] absolute right-10 top-96 ">
             </div>
 
-            {{-- Row 1 --}}
             <div class="flex flex-col flex-wrap justify-start lg:flex-row lg:justify-between">
                 <div class="lg:w-[45%] w-full ">
                     <p
@@ -537,7 +451,6 @@
                     </div>
                 </div>
             </div>
-            {{-- Row 2 --}}
             <div class="flex flex-wrap justify-around gap-5 my-5 lg:justify-end lg:gap-7 md:mt-5 xl:mt-10">
                 <div data-aos="fade-left"
                     class="max-w-[340px] min-h-[85px] w-full h-[85px] flex p-5 bg-secondary rounded items-center gap-3">
@@ -557,7 +470,6 @@
                     <p class="text-lg font-semibold text-white">Pemerintahan</p>
                 </div>
             </div>
-            {{-- Row 3 --}}
             <div class="flex flex-wrap justify-around gap-5 lg:justify-start lg:gap-7 lg:mt-10">
                 <div data-aos="fade-right"
                     class="max-w-[340px] min-h-[85px] w-full h-[85px] flex p-5 bg-secondary rounded items-center gap-3">
@@ -579,11 +491,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     {{-- Price Cards --}}
-    <section class="bg-semi-sky-blue">
-        <div class="container p-5 mx-auto lg:p-20 lg:px-14 py-14 ">
+    <section class="bg-semi-sky-blue" id="produk">
+        <div class="container p-5 mx-auto pb-14 pt-[120px] lg:pt-[120px] lg:pb-20 lg:px-14">
             <div class="max-w-[640px] w-full mx-auto ">
                 <p class="text-2xl font-semibold leading-9 text-start md:text-center md:text-3xl">Paket Internet DHAHA
                     PRIMA</p>
@@ -599,7 +511,8 @@
 
             <div class="flex flex-wrap justify-around gap-1 mt-16 gap-y-10 w-100">
                 @foreach ($priceCards as $priceCard)
-                    <div class="price-card bg-white border max-w-[380px] w-full min-h-[500px] p-8">
+                    <div class="price-card bg-white border max-w-[350px] lg:max-w-[380px] w-full min-h-[500px] p-8"
+                        data-aos="fade-up" data-aos-delay="{{ $priceCard['delay'] }}">
                         <p class="mb-3 text-lg font-semibold">{{ $priceCard['title'] }}</p>
                         <p class="text-sm">{{ $priceCard['desc'] }}</p>
                         <div class="flex items-end gap-1 mt-5">
@@ -607,7 +520,7 @@
                             <p class="text-4xl font-bold">{{ $priceCard['price_arr']['price'] }}</p>
                             <p class="text-xl font-light">{{ $priceCard['price_arr']['month'] }}</p>
                         </div>
-                        <a href="#"
+                        <a href="https://wa.me/6281335964620" target="_blank"
                             class="block w-full py-3 mt-5 tracking-wide text-center text-white rounded bg-primary">
                             Klik untuk berlangganan
                         </a>
@@ -627,11 +540,12 @@
     </section>
 
     {{-- Review Cards --}}
-    <section id="reviews" class="relative overflow-hidden bg-semi-sky-blue">
+    {{-- <section id="reviews" class="relative overflow-hidden bg-semi-sky-blue">
         <img src="{{ asset('assets/images/bg-circle-group-2.svg') }}" alt="icon"
             class="absolute top-80 lg:left-0 lg:top-0">
         <div class="w-[400px] h-[400px] rounded-full bg-primary absolute right-[-300px] lg:right-[-250px] top-[-50px]">
         </div>
+
         <div class="container relative z-10 p-5 mx-auto lg:p-10 ">
             <div class="max-w-[700px] mx-auto ">
                 <p class="text-2xl font-semibold lg:text-center">DHAHA PRIMA Dipercaya Oleh 2000+ pengguna
@@ -676,25 +590,25 @@
                     @endforeach
                 </div>
                 <div class="swiper-pagination"></div>
-                {{-- <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div> --}}
             </div>
         </div>
-    </section>
+    </section> --}}
 
-    <footer class="bg-secondary">
-        <div class="container px-10 pt-16 mx-auto lg:px-10">
+    <footer class="bg-secondary" id="kontak">
+        <div class="container px-5 pt-16 mx-auto lg:px-10">
             <div class="relative flex flex-wrap justify-between pb-8 top-footer">
+                {{-- Background & Overlay --}}
                 <div
                     class="bg-[url('/public/assets/images/bg-footer.svg')] bg-secondary top-0 left-0 right-0 bottom-0 bg-contain bg-no-repeat bg-center absolute">
                 </div>
                 <div class="absolute z-10 w-full h-full p-20 opacity-75 layer bg-secondary"></div>
+                {{-- Background & Overlay --}}
 
-                <div class="flex flex-col md:w-[55%] m-auto lg:w-[30%] gap-4 mb-5 z-10">
+                <div class="flex flex-col w-full mx-auto justify-center lg:w-[30%] gap-4 mb-5 z-10">
                     <img src="{{ asset('assets/images/logo.png') }}" alt="logo"
                         class="w-[250px] md:m-auto lg:m-0">
-                    <p style="line-height: 26px !important"
-                        class="text-lg font-light text-white text-start md:text-center md:text-sm lg:text-start">
+                    <p
+                        class="text-base font-light leading-7 text-white text-start md:text-center md:text-sm lg:text-start">
                         Solusi
                         Layanan Akses
                         Internet
@@ -703,58 +617,40 @@
                         Internet Secepat
                         Cahaya Hadir Untuk Anda.</p>
                 </div>
-                <div class="lg:w-[65%] flex flex-wrap flex-col md:flex-row justify-around gap-5 z-10">
-                    <div class="flex flex-col flex-wrap lg:w-[20%] gap-3 text-white">
-                        <p class="text-lg font-semibold">Layanan</p>
-                        <span class="w-full mt-3">
-                            <a href="" class="mt-3 text-sm font-light anchor-link ">
-                                Internet
-                                Service Provider </a>
-                        </span>
-                        <span class="w-full">
-                            <a href="" class="mt-3 text-sm font-light anchor-link ">
-                                Co Location</a>
-                        </span>
-                        <span class="w-full">
-                            <a href="" class="mt-3 text-sm font-light anchor-link ">
-                                Managed Service </a>
-                        </span>
-                        <span class="w-full">
-                            <a href="" class="mt-3 text-sm font-light anchor-link ">
-                                Metro-E,VPN,V-Sat</a>
-                        </span>
-                    </div>
-                    <div class="flex flex-col lg:w-[20%] gap-3 text-white">
-                        <p class="text-lg font-semibold">Halaman</p>
-                        <a class="mt-3 text-sm font-light anchor-link">Beranda</a>
-                        <a class="text-sm font-light anchor-link">Testimoni</a>
-                        <a class="text-sm font-light anchor-link">Layanan</a>
-                        <a class="text-sm font-light anchor-link">Kontak</a>
-                    </div>
-                    <div class="flex flex-col lg:w-[40%] gap-3 text-white">
+
+                <div
+                    class="lg:w-[65%] w-full flex flex-wrap flex-col md:flex-row justify-around mt-5 lg:mt-0 gap-5 gap-y-10 z-10">
+                    <div class="flex flex-col md:w-[40%] lg:w-[40%] gap-3 text-white">
                         <p class="text-lg font-semibold">Kontak</p>
                         <div class="flex flex-wrap gap-1 mt-3 ">
                             <p class="text-sm font-semibold">Alamat :</p>
-                            <p class="text-sm font-extralight">Jl Ralarangan No.01 A, Desa Ketawang, Larangan,
-                                Sumenep, Jawa Timur,
-                                69462</p>
+                            <p class="text-sm font-extralight">Candi,Adan-adan RT 12 RW 05,Gurah,Kab Kediri,Jawa
+                                Timur,64181</p>
                         </div>
-                        <div class="flex flex-wrap gap-1 ">
+                        <div class="flex flex-wrap gap-1 anchor-link ">
                             <p class="text-sm font-semibold">Email :</p>
-                            <p class="text-sm font-extralight">cs@DhahaPrimaNet</p>
+                            <a href="https://wa.me/6281335964620 " target="_blank"
+                                class="text-sm font-extralight">cs@DhahaPrimaNet</a>
                         </div>
-                        <div class="flex flex-wrap gap-1 ">
+                        <div class="flex flex-wrap gap-1 anchor-link">
                             <p class="text-sm font-semibold">Telepon :</p>
-                            <p class="text-sm font-extralight">+62817770044</p>
+                            <a href="https://wa.me/6281335964620 " target="_blank" class="text-sm font-extralight">
+                                +62 813-3596-4620</a>
                         </div>
-                        <div class="flex flex-wrap gap-1 ">
+                        <div class="flex flex-wrap gap-1 anchor-link">
                             <p class="text-sm font-semibold">WhatsApp :</p>
-                            <p class="text-sm font-extralight">+62817770044</p>
+                            <a href="https://wa.me/6281335964620 " target="_blank" class="text-sm font-extralight">
+                                +62 813-3596-4620</a>
                         </div>
                     </div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15195.003405760319!2d112.117233!3d-7.771619000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e785b1946c19117%3A0xb0ecac15977ef548!2sPT.DHAHA%20PRIMA.NET!5e1!3m2!1sen!2sus!4v1717598914600!5m2!1sen!2sus"
+                        class="md:w-full md:max-w-[320px] lg:w-[400px] h-[300px]" style="border:0;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-            <div class="flex justify-between py-5 bottom-footer">
+            <div
+                class="flex flex-wrap justify-between gap-5 py-5 bottom-footer border-t-[1px] border-default-border-color">
                 <div class="flex gap-5">
                     <a href="#" class="w-[20px] h-[20px]">
                         <img src="{{ asset('assets/images/facebook-icon.svg') }}" alt="icon">
@@ -769,15 +665,43 @@
                         <img src="{{ asset('assets/images/youtube-icon.svg') }}" alt="icon">
                     </a>
                 </div>
-                <p class="text-sm font-light text-white">© 2024 PT DHAHA PRIMA NET</p>
+                <p class="text-sm font-light tracking-wider text-white">© 2024 PT DHAHA PRIMA NET</p>
             </div>
         </div>
     </footer>
+
+    <button onclick="toTop(this)"
+        class="fixed z-50 grid w-12 h-12 rounded bg-primary bottom-8 right-8 place-items-center toTop">
+        <i class="ri-arrow-up-line"></i>
+    </button>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const loader = document.querySelector("#loader-wrapper")
+            setTimeout(() => {
+                loader.classList.add("remove-loader")
+                setTimeout(() => {
+                    loader.remove()
+                }, 5200);
+            }, 800);
+        })
+
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            const btnToTop = document.querySelector(".toTop")
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                btnToTop.style.display = "grid";
+            } else {
+                btnToTop.style.display = "none";
+            }
+        }
+
         AOS.init();
         const swiper = new Swiper('.swiper', {
             direction: 'horizontal',
@@ -816,11 +740,35 @@
                     slidesPerView: 1,
                 },
             }
-            // navigation: {
-            //     nextEl: '.swiper-button-next',
-            //     prevEl: '.swiper-button-prev',
-            // },
         });
+
+        function toTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        function toggleNavbar(e) {
+            let menu = document.querySelector(".menu")
+            let active = document.querySelector(".menu.active")
+            if (active) {
+                active.classList.remove("active")
+            } else {
+                menu.classList.add("active")
+            }
+        }
+
+        const menuItem = document.querySelectorAll(".menu-item")
+        menuItem.forEach((v, i) => {
+            v.addEventListener("click", function() {
+                let menu = document.querySelector(".menu")
+                let active = document.querySelector(".menu.active")
+                if (active) {
+                    active.classList.remove("active")
+                } else {
+                    menu.classList.add("active")
+                }
+            })
+        })
     </script>
 
 </body>
