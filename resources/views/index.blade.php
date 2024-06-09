@@ -88,7 +88,7 @@
                     PT BAROKAH NET
                 </p>
                 <h1 data-aos="fade-right" data-aos-delay="900"
-                    class="text-2xl font-bold leading-8 md:leading-10 lg:text-[48px] lg:leading-[58px] lg:text-4xl md:text-3xl">
+                    class="text-2xl font-bold leading-8 md:leading-10 xl:leading-[64px] xl:text-5xl lg:leading-[58px] lg:text-4xl sm:text-3xl">
                     Solusi Layanan Akses <span
                         class="relative after:absolute after:content-[''] after:w-full after:h-1/3 after:left-0 after:bottom-0 after:bg-primary after:z-[-1]">Internet
                         Terbaik</span> Di Kelasnya
