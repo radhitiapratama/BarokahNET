@@ -136,14 +136,18 @@
         }
     }
 
-    .card-contact-wa.active {
+    .chatwa-container.active .chatwa-wrapper {
         display: flex;
         /* opacity: 1;
         z-index: 50;
         transform: translateY(0); */
     }
 
-    .card-contact-wa {
+    .chatwa-container.active .info-chat {
+        display: none;
+    }
+
+    .chatwa-wrapper {
         display: none;
         /* opacity: 0;
         z-index: -100;

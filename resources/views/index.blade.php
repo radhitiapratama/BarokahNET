@@ -690,9 +690,9 @@
         </div>
     </footer>
 
-    <div class="fixed z-50 flex flex-col bottom-3 right-3">
+    <div class="fixed z-50 flex flex-col chatwa-container bottom-3 right-3">
         <div
-            class="chat-container shadow card-contact-wa transition-all duration-500 max-w-[350px] bg-white p-5 rounded flex-col gap-y-4">
+            class="shadow chatwa-wrapper transition-all duration-500 max-w-[350px] bg-white p-5 rounded flex-col gap-y-4">
             <div class="mb-2 text-xs chat-header">
                 <p>Silahkan klik nomer kami di bawah untuk memulai percakapan di <span
                         class="font-bold">Whatsapp</span></p>
@@ -705,7 +705,7 @@
             </div>
         </div>
         <div class="flex items-center justify-end gap-3 p-2 contact-wa-btn">
-            <div class="flex items-center h-8 px-3 bg-white rounded shadow">
+            <div class="flex items-center h-8 px-3 bg-white rounded shadow info-chat">
                 <p class="text-xs">Butuh bantuan? <span class="font-semibold">Hubungi kami</span></p>
             </div>
             <button type="button" onclick="toggleContactWA(event)"
@@ -817,12 +817,12 @@
         })
 
         function toggleContactWA(e) {
-            let cardContactWA = document.querySelector(".card-contact-wa")
-            let active = document.querySelector(".card-contact-wa.active")
+            let chatwaContainer = document.querySelector(".chatwa-container")
+            let active = document.querySelector(".chatwa-container.active")
             if (active) {
                 active.classList.remove("active")
             } else {
-                cardContactWA.classList.add("active")
+                chatwaContainer.classList.add("active")
             }
         }
     </script>
