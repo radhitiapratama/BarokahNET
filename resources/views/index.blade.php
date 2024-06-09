@@ -698,7 +698,8 @@
                         class="font-bold">Whatsapp</span></p>
             </div>
             <div class="flex flex-col chat-body gap-y-3">
-                <a href="" target="_blank" class="flex items-center gap-5 p-3 bg-semi-sky-blue">
+                <a href="https://wa.me/6281335964620" target="_blank"
+                    class="flex items-center gap-5 p-3 bg-semi-sky-blue">
                     <img src="{{ asset('assets/images/fav-icon.png') }}" alt="icon" class="w-8 h-8">
                     <p class="text-sm">+62 813-3596-4620</p>
                 </a>
