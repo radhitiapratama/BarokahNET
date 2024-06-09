@@ -9,7 +9,7 @@ class PageController extends Controller
 
     protected $priceCards = [
         [
-            'title' => "Barokah NET FIBER 12 Mbps",
+            'title' => "BarokahNet 12 Mbps",
             'desc' => 'Biaya Registrasi & Instalasi Rp.165.000',
             'price_arr' => [
                 'rp' => "Rp.",
@@ -28,7 +28,7 @@ class PageController extends Controller
             'delay' => 0
         ],
         [
-            'title' => "Barokah NET FIBER 25 Mbps",
+            'title' => "BarokahNet 25 Mbps",
             'desc' => 'Biaya Registrasi & Instalasi Rp.250.000',
             'price_arr' => [
                 'rp' => "Rp.",
@@ -47,7 +47,7 @@ class PageController extends Controller
             'delay' => 200
         ],
         [
-            'title' => "Barokah NET FIBER 30 Mbps",
+            'title' => "BarokahNet 30 Mbps",
             'desc' => 'Biaya Registrasi & Instalasi Rp.275.000',
             'price_arr' => [
                 'rp' => "Rp.",
@@ -66,7 +66,7 @@ class PageController extends Controller
             'delay' => 400
         ],
         [
-            'title' => "Barokah NET FIBER 50 Mbps",
+            'title' => "BarokahNet 50 Mbps",
             'desc' => 'Biaya Registrasi & Instalasi Rp.300.000',
             'price_arr' => [
                 'rp' => "Rp.",
@@ -85,7 +85,7 @@ class PageController extends Controller
             'delay' => 0
         ],
         [
-            'title' => "Barokah NET FIBER 75 Mbps",
+            'title' => "BarokahNet 75 Mbps",
             'desc' => 'Biaya Registrasi & Instalasi Rp.375.000',
             'price_arr' => [
                 'rp' => "Rp.",
@@ -104,7 +104,7 @@ class PageController extends Controller
             'delay' => 200
         ],
         [
-            'title' => "Barokah NET 100 Mbps",
+            'title' => "BarokahNet 100 Mbps",
             'desc' => 'Biaya Registrasi & Instalasi Rp.400.000',
             'price_arr' => [
                 'rp' => "Rp.",
@@ -123,8 +123,8 @@ class PageController extends Controller
             'delay' => 400
         ],
         [
-            'title' => "Barokah NET CORPORATE",
-            'desc' => 'Biaya Registrasi & Instalasi Rp. Hubungi CS / Sales & Marketing PT Barokah NET Net',
+            'title' => "BarokahNet CORPORATE",
+            'desc' => 'Biaya Registrasi & Instalasi Rp. Hubungi CS / Sales & Marketing BarokahNet',
             'price_arr' => [
                 'rp' => "Rp.",
                 'price' => "Hubungi CS",
@@ -142,8 +142,8 @@ class PageController extends Controller
             'delay' => 0
         ],
         [
-            'title' => "Barokah NET HOSPITALITY MS",
-            'desc' => 'Biaya Registrasi & Instalasi Rp. Hubungi CS / Sales & Marketing PT Barokah NET Net',
+            'title' => "BarokahNet HOSPITALITY MS",
+            'desc' => 'Biaya Registrasi & Instalasi Rp. Hubungi CS / Sales & Marketing BarokahNet',
             'price_arr' => [
                 'rp' => "Rp.",
                 'price' => "Hubungi CS",
@@ -161,8 +161,8 @@ class PageController extends Controller
             'delay' => 200
         ],
         [
-            'title' => "Barokah NET Metro-E & V-SAT",
-            'desc' => 'Biaya Registrasi & Instalasi Rp. Hubungi CS / Sales & Marketing PT Barokah NET Net',
+            'title' => "BarokahNet Metro-E & V-SAT",
+            'desc' => 'Biaya Registrasi & Instalasi Rp. Hubungi CS / Sales & Marketing BarokahNet',
             'price_arr' => [
                 'rp' => "Rp.",
                 'price' => "Hubungi CS",
@@ -183,7 +183,7 @@ class PageController extends Controller
 
     protected $reviewCards = [
         [
-            'text' => '"Layanan DHAHAPRIMA FIBER yang ada dirumah kami sungguh sangat memuaskan, akses ke berbagai macam situs baik itu sosial media, streaming video dan bermain game sangat lancar. kecepatan download dan upload sesuai paket layanan, kami sekeluarga puas menggunakan layanan DHAHAPRIMA FIBER."',
+            'text' => '"Layanan  yang ada dirumah kami sungguh sangat memuaskan, akses ke berbagai macam situs baik itu sosial media, streaming video dan bermain game sangat lancar. kecepatan download dan upload sesuai paket layanan, kami sekeluarga puas menggunakan layanan DHAHAPRIMA FIBER."',
             'name' => 'Muhammad Pratama Aditya',
             'job' => "Gamer's (Pelanggan Rumahan)"
         ],
@@ -207,10 +207,10 @@ class PageController extends Controller
     protected $serviceCards_1 = [
         [
             'icon' => 'assets/images/router-yellow.svg',
-            'title' => 'Barokah NET FIBER',
+            'title' => 'BarokahNet',
             'desc' => ' Dengan teknologi 100% optical network akses
             internet dirumah anda secepat cahaya!
-            Layanan yang Barokah NET FIBER distribuskan
+            Layanan yang BarokahNet distribuskan
             kerumah anda Tanpa Batasan Kuota (FUP) anda
             tidak perlu khawatir kecepatan akses menurun
             karena Batasan Kuota yang terlampaui,
@@ -233,13 +233,13 @@ class PageController extends Controller
         ],
         [
             'icon' => 'assets/images/bank-yellow.svg',
-            'title' => 'Barokah NET CORPORATE',
+            'title' => 'BarokahNet CORPORATE',
             'desc' => 'Layanan akses internet berdedikasi untuk
             kebutuhan perkantoran dan berbagai macam
             industri skala menengah keatas yang
             membutuhkan konektivitas eksklusif, dengan
             dedicated bandwidth atau committed
-            bandwidth. Barokah NET CORPORATE menyediakan
+            bandwidth. BarokahNet CORPORATE menyediakan
             bandwidth dengan sumber daya khusus CIR
             (Committed Information Rate) 1:1 yang
             dialokasikan dan diperuntukkan hanya untuk 1
@@ -247,7 +247,7 @@ class PageController extends Controller
             yang tinggi, stabil konsisten tanpa
             fluktuasi serta garansi ketersediaan
             jaringan dengan SLA (Service Level
-            Agreement) 99,8%. Barokah NET CORPORATE
+            Agreement) 99,8%. BarokahNet CORPORATE
             didistribusikan melalui minimal 2 jalur
             eksklusif (Redundant Link) pada backbone &
             last mile sehingga dalam waktu yang sangat
@@ -255,15 +255,15 @@ class PageController extends Controller
             satu jalur distribusi layanan, dengan cepat
             akan digantikan oleh distribusi dari jalur
             lainnya agar layanan tetap tersedia secara
-            optimal di sisi pengguna layanan Barokah NET
+            optimal di sisi pengguna layanan BarokahNet
             CORPORATE.'
         ],
         [
             'icon' => 'assets/images/base-station-yellow.svg',
-            'title' => 'Barokah NET HOSPITALITY',
+            'title' => 'BarokahNet HOSPITALITY',
             'desc' => 'Sebagai perusahaan yang memiliki produk
             unggulan Managed Service Provider
-            Hospitality / Perhotelan, Barokah NET
+            Hospitality / Perhotelan, BarokahNet
             HOSPITALITY MANAGED SERVICE memberikan
             optimasi layanan akses internet, penyediaan
             serta pengelolaan sumber daya informasi dan
@@ -272,7 +272,7 @@ class PageController extends Controller
             beserta sumber daya manusia yang dibutuhkan
             ataupun memberikan edukasi kepada sumber
             daya manusia yang sudah dimiliki oleh
-            pengguna layanan. Barokah NET HOSPITALITY
+            pengguna layanan. BarokahNet HOSPITALITY
             MANAGED SERVICE didukung oleh tenaga ahli
             bersertifikasi profesional dan menggunakan
             perangkat keras jaringan telekomunikasi
@@ -280,7 +280,7 @@ class PageController extends Controller
             ARUBA, RUIJIE, UBIQUITY dan lain sebagainya
             untuk menjamin layanan yang kami berikan
             adalah layanan terbaik untuk tamu dan
-            customer hotel pengguna layanan Barokah NET
+            customer hotel pengguna layanan BarokahNet
             HOSPITALITY MANAGED SERVICE.'
         ],
     ];

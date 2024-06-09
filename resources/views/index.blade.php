@@ -84,8 +84,8 @@
             class="container relative z-20 flex justify-around flex-wrap h-full p-5 mx-auto lg:p-16 pt-[120px] md:pt-[130px] lg:pt-[150px] gap-y-8">
             <div class="flex flex-col justify-center lg:w-[50%] w-full md:w-[55%]">
                 <p data-aos="fade-right" data-aos-delay="800"
-                    class="mb-2 text-xl font-bold text-secondary md:text-2xl lg:text-3xl ">
-                    PT BAROKAH NET
+                    class="mb-2 text-xl font-bold text-secondary md:text-4xl lg:text-3xl ">
+                    PT LINK DATA SUMBER BAROKAH
                 </p>
                 <h1 data-aos="fade-right" data-aos-delay="900"
                     class="text-2xl font-bold leading-8 md:leading-10 xl:leading-[64px] xl:text-5xl lg:leading-[58px] lg:text-4xl sm:text-3xl">
@@ -127,18 +127,12 @@
             <div id="profile" data-aos="fade-up" data-aos-delay="1200"
                 class="m-auto mt-[-120px] flex h-full min-h-[230px] w-full max-w-[900px] flex-col items-center justify-center rounded-bl-[50px] rounded-br rounded-tl rounded-tr-[50px] bg-secondary p-7 lg:px-[100px] text-white relative z-20">
                 <p class="mb-4 text-lg font-bold lg:text-2xl">
-                    "PT Barokah NET Hadir Menjangkau Seluruh Negeri"
+                    "BarokahNet Hadir Menjangkau Seluruh Negeri"
                 </p>
                 <p class="md:text-center text-start text-xs leading-[22px]">
-                    Kami bermitra dengan banyak perusahaan pengembang
-                    infrastruktur telekomunikasi untuk membangun
-                    infrastruktur dengan standar internasional dan
-                    menyediakan layanan internet eksklusif berkualitas
-                    premium untuk Perumahaan, Perkantoran, Perhotelan dan
-                    Berbagai Macam Industri Lainnya. Kami hadir untuk
-                    memberikan yang terbaik kepada seluruh pengguna layanan
-                    kami di PERKOTAAN maupun di PERDESAAN, dari IBU KOTA
-                    sampai PELOSOK NEGERI.
+                    Sebagai perusahan swasta yang bergerak di bidang layanan Internet (ISP)
+                    dengan biaya murah dan terjangkau BarokahNet hadir untuk memenuhi kebutuhan masyarakat yang selama ini sulit mendapatkan akses internet.
+                    Semoga kehadiran layanan jaringan internet murah ini bisa mempermudah banyak orang untuk mendapatkan akses internet dan menjawab semua kebutuhan masyarakat di era modern.
                 </p>
             </div>
 
@@ -207,10 +201,10 @@
                     seperti
                     meeting online,
                     belanja online, mengembangkan bisnis secara online, upload download, bermain game online,
-                    menayangkan sesi live dan streaming. Layanan Internet Barokah NET hadir dengan kapasitas
+                    menayangkan sesi live dan streaming. Layanan Internet BarokahNet hadir dengan kapasitas
                     bandwidth dan kecepatan akses internet secepat cahaya, biaya berlangganan yang terjangkau dengan
                     package yang bisa disesuaikan dengan kebutuhan. Memanjakan dan memberikan pengalaman terbaik kepada
-                    setiap pengguna layanan Internet Barokah NET FIBER dalam kegiatan digital di Rumah 24 jam tanpa
+                    setiap pengguna layanan Internet BarokahNet FIBER dalam kegiatan digital di Rumah 24 jam tanpa
                     perlu khawatir.</p>
                 <div class="flex flex-col mb-4 md:flex-row gap-y-4">
                     <div class="flex items-center flex-1 gap-2">
@@ -516,7 +510,7 @@
         <div class="container p-5 mx-auto pb-14 pt-[120px] lg:pt-[120px] lg:pb-20 lg:px-14">
             <div class="max-w-[640px] w-full mx-auto ">
                 <p class="text-2xl font-semibold leading-9 text-start md:text-center md:text-3xl">Paket Internet
-                    <span class="font-bold text-primary">Barokah NET</span>
+                    <span class="font-bold text-primary">BarokahNet</span>
                 </p>
                 <p class="mt-5 text-sm leading-6 md:text-center text-custom-text-card">Internet Secepat Cahaya dengan
                     harga
@@ -653,14 +647,14 @@
                                 class="text-sm font-extralight">cs@BarokahNet</a>
                         </div>
                         <div class="flex flex-wrap gap-1 anchor-link">
-                            <p class="text-sm font-semibold">Telepon :</p>
-                            <a href="https://wa.me/6281335964620 " target="_blank" class="text-sm font-extralight">
-                                +62 813-3596-4620</a>
+                            <p class="text-sm font-semibold">Cs :</p>
+                            <a href="https://wa.me/62817770044 " target="_blank" class="text-sm font-extralight">
+                                +62 817-770-044</a>
                         </div>
                         <div class="flex flex-wrap gap-1 anchor-link">
-                            <p class="text-sm font-semibold">WhatsApp :</p>
-                            <a href="https://wa.me/6281335964620 " target="_blank" class="text-sm font-extralight">
-                                +62 813-3596-4620</a>
+                            <p class="text-sm font-semibold">HD :</p>
+                            <a href="https://wa.me/62817770033 " target="_blank" class="text-sm font-extralight">
+                                +62 817-770-033</a>
                         </div>
                     </div>
                     <iframe
@@ -685,7 +679,7 @@
                         <img src="{{ asset('assets/images/youtube-icon.svg') }}" alt="icon">
                     </a>
                 </div> --}}
-                <p class="text-sm font-light tracking-wider text-white">© 2024 PT BAROKAH NET</p>
+                <p class="text-sm font-light tracking-wider text-white ">© 2024 PT BAROKAH NET</p>
             </div>
         </div>
     </footer>
@@ -698,10 +692,10 @@
                         class="font-bold">Whatsapp</span></p>
             </div>
             <div class="flex flex-col chat-body gap-y-3">
-                <a href="https://wa.me/6281335964620" target="_blank"
+                <a href="https://wa.me/+62817770044" target="_blank"
                     class="flex items-center gap-5 p-3 bg-semi-sky-blue">
                     <img src="{{ asset('assets/images/fav-icon.png') }}" alt="icon" class="w-8 h-8">
-                    <p class="text-sm">+62 813-3596-4620</p>
+                    <p class="text-sm">+62 817-770-044</p>
                 </a>
             </div>
         </div>
