@@ -131,8 +131,10 @@
                 </p>
                 <p class="md:text-center text-start text-xs leading-[22px]">
                     Sebagai perusahan swasta yang bergerak di bidang layanan Internet (ISP)
-                    dengan biaya murah dan terjangkau BarokahNet hadir untuk memenuhi kebutuhan masyarakat yang selama ini sulit mendapatkan akses internet.
-                    Semoga kehadiran layanan jaringan internet murah ini bisa mempermudah banyak orang untuk mendapatkan akses internet dan menjawab semua kebutuhan masyarakat di era modern.
+                    dengan biaya murah dan terjangkau BarokahNet hadir untuk memenuhi kebutuhan masyarakat yang selama
+                    ini sulit mendapatkan akses internet.
+                    Semoga kehadiran layanan jaringan internet murah ini bisa mempermudah banyak orang untuk mendapatkan
+                    akses internet dan menjawab semua kebutuhan masyarakat di era modern.
                 </p>
             </div>
 
@@ -638,8 +640,8 @@
                         <p class="text-lg font-semibold">Kontak</p>
                         <div class="flex flex-wrap gap-1 mt-3 ">
                             <p class="text-sm font-semibold">Alamat :</p>
-                            <p class="text-sm font-extralight">Candi,Adan-adan RT 12 RW 05,Gurah,Kab Kediri,Jawa
-                                Timur,64181</p>
+                            <p class="text-sm font-extralight">Bates Timur,RT 6/RW 3,Desa Ellak Daya,Kec. Lenteng,Kab.
+                                Sumenep,Jawa Timur 69461</p>
                         </div>
                         <div class="flex flex-wrap gap-1 anchor-link ">
                             <p class="text-sm font-semibold">Email :</p>
@@ -647,7 +649,7 @@
                                 class="text-sm font-extralight">cs@BarokahNet</a>
                         </div>
                         <div class="flex flex-wrap gap-1 anchor-link">
-                            <p class="text-sm font-semibold">Cs :</p>
+                            <p class="text-sm font-semibold">CS :</p>
                             <a href="https://wa.me/62817770044 " target="_blank" class="text-sm font-extralight">
                                 +62 817-770-044</a>
                         </div>
@@ -657,8 +659,12 @@
                                 +62 817-770-033</a>
                         </div>
                     </div>
-                    <iframe
+                    {{-- <iframe
                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15195.003405760319!2d112.117233!3d-7.771619000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e785b1946c19117%3A0xb0ecac15977ef548!2sPT.DHAHA%20PRIMA.NET!5e1!3m2!1sen!2sus!4v1717598914600!5m2!1sen!2sus"
+                        class="md:w-full md:max-w-[320px] lg:w-[400px] h-[300px]" style="border:0;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15839.54179541022!2d113.7826199!3d-7.0227491!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd9e7aedf9151b7%3A0xe3348dbbd88ce5f9!2sBarokah%20Network%20ISP!5e0!3m2!1sid!2sid!4v1717938473994!5m2!1sid!2sid"
                         class="md:w-full md:max-w-[320px] lg:w-[400px] h-[300px]" style="border:0;"
                         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
