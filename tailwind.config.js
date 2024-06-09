@@ -18,8 +18,9 @@ export default {
         'sans': ['Montserrat', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        "primary": "#FECC00",
-        "secondary": '#333333',
+        "primary": "#27AB72",
+        "secondary": '#2B6F6E',
+        "custom-dark": '#333333',
         'default-border-color': '#E1E1E1',
         'semi-sky-blue': '#F2F5FB',
         'red-circle': "#FF4A3E",

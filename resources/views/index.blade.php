@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Dhaha Prima</title>
+    <title>Barokah NET</title>
     @vite('resources/css/app.css')
-    <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/logo.png') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/fav-icon.png') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -18,15 +18,20 @@
     {{-- Loader --}}
     <div id="loader-wrapper"
         class="fixed z-[200] flex items-center justify-center w-screen h-screen  bg-white transition-all ease-in-out duration-500">
-        <div class="loader"></div>
+        <div class="loading-wave">
+            <div class="loading-bar"></div>
+            <div class="loading-bar"></div>
+            <div class="loading-bar"></div>
+            <div class="loading-bar"></div>
+        </div>
     </div>
 
     {{-- Navbar --}}
     <nav class="fixed top-0 z-[100] h-[100px] w-screen border-b-[1px] border-default-border-color bg-white">
         <div class="container static flex flex-wrap items-center h-full mx-auto md:px-16">
             <div class="static h-full px-5">
-                <img src="{{ asset('assets/images/logo.png') }}" alt="logo"
-                    class="object-contain w-32 h-full md:w-40" />
+                <img src="{{ asset('assets/images/logo-barokahnet.svg') }}" alt="logo"
+                    class="object-contain w-32 h-full md:w-52" />
             </div>
             <ul
                 class="absolute gap-y-7 px-5 flex flex-col flex-wrap py-6 bg-white w-full md:ml-auto md:w-[60%] md:static md:flex-row md:items-center md:justify-end md:gap-7 md:flex menu z-[-1] md:z-10">
@@ -76,29 +81,40 @@
         </div>
 
         <div
-            class="container relative z-20 flex flex-wrap h-full p-5 mx-auto lg:p-16 pt-[120px] md:pt-[130px] lg:pt-[150px] gap-y-8">
-            <div class="flex flex-col justify-center lg:w-[50%] w-full">
+            class="container relative z-20 flex justify-around flex-wrap h-full p-5 mx-auto lg:p-16 pt-[120px] md:pt-[130px] lg:pt-[150px] gap-y-8">
+            <div class="flex flex-col justify-center lg:w-[50%] w-full md:w-[55%]">
                 <p data-aos="fade-right" data-aos-delay="800"
-                    class="mb-2 text-xl font-semibold text-gray-500 md:text-2xl lg:text-3xl ">
-                    PT DHAHA PRIMA NET
+                    class="mb-2 text-xl font-bold text-secondary md:text-2xl lg:text-3xl ">
+                    PT BAROKAH NET
                 </p>
                 <h1 data-aos="fade-right" data-aos-delay="900"
                     class="text-2xl font-bold leading-8 md:leading-10 lg:text-[48px] lg:leading-[58px] lg:text-4xl md:text-3xl">
-                    Solusi Layanan Akses Internet Terbaik Di Kelasnya
+                    Solusi Layanan Akses <span
+                        class="relative after:absolute after:content-[''] after:w-full after:h-1/3 after:left-0 after:bottom-0 after:bg-primary after:z-[-1]">Internet
+                        Terbaik</span> Di Kelasnya
                 </h1>
                 <p data-aos="fade-right" data-aos-delay="1000" class="my-4 mb-6 text-[16px] font-normal">
                     Nikmati layanan akses internet fiber optic berkecapatan
                     tinggi dengan nyaman, aman & stabilitas di atas
                     rata-rata. Mulai Dari: Rp. 165.000 / Bulan
                 </p>
-                <a data-aos="fade-right" data-aos-delay="1100" href="https://wa.me/6281335964620" target="_blank"
-                    class="px-8 py-3 text-sm font-medium tracking-wide text-white uppercase rounded-full w-max bg-primary">
-                    Daftar Sekarang
-                </a>
+                <div class="flex flex-wrap gap-5">
+                    <a data-aos="fade-right" data-aos-delay="1100" href="https://wa.me/6281335964620" target="_blank"
+                        class="flex items-center gap-2 px-5 py-2 text-sm font-medium tracking-wide text-white uppercase rounded-full w-max bg-primary">
+                        <i class="text-xl ri-whatsapp-line"></i>
+                        Daftar Sekarang
+                    </a>
+                    <a data-aos="fade-right" data-aos-delay="1100" href="#produk"
+                        class="flex items-center gap-2 px-5 py-2 text-sm font-bold tracking-wide uppercase border-2 rounded-full border-primary w-max text-primary">
+                        <i class="text-xl ri-router-line text-primary"></i>
+                        Produk Kami
+                    </a>
+                </div>
             </div>
-            <div class="flex items-center justify-end w-full lg:w-[35%] ml-24" data-aos="fade-up" data-aos-delay="900">
-                <img src="{{ asset('assets/images/connected_wordl.svg') }}" alt="background world"
-                    class="w-0 lg:w-full" />
+            <div class="flex items-center lg:justify-end w-full md:w-[35%] lg:w-[37%] lg:ml-24 my-8 md:my-0"
+                data-aos="fade-up" data-aos-delay="900">
+                <img src="{{ asset('assets/images/hero-img.svg') }}" alt="background world"
+                    class="block w-full mx-auto" />
             </div>
         </div>
     </section>
@@ -111,7 +127,7 @@
             <div id="profile" data-aos="fade-up" data-aos-delay="1200"
                 class="m-auto mt-[-120px] flex h-full min-h-[230px] w-full max-w-[900px] flex-col items-center justify-center rounded-bl-[50px] rounded-br rounded-tl rounded-tr-[50px] bg-secondary p-7 lg:px-[100px] text-white relative z-20">
                 <p class="mb-4 text-lg font-bold lg:text-2xl">
-                    "Dhaha Prima Hadir Menjangkau Seluruh Negeri"
+                    "PT Barokah NET Hadir Menjangkau Seluruh Negeri"
                 </p>
                 <p class="md:text-center text-start text-xs leading-[22px]">
                     Kami bermitra dengan banyak perusahaan pengembang
@@ -181,7 +197,9 @@
                     Mau Berlangganan
                     Internet di
                     Rumah?
-                    #DHAHAPRIMAinAJA
+                    <span class="text-primary">
+                        #BAROKAHNETinAJA
+                    </span>
                 </p>
                 <p class="mb-6 text-xs leading-6 md:leading-7 md:text-sm">Era digital memberikan banyak kemudahan dalam
                     beraktivitas
@@ -189,10 +207,10 @@
                     seperti
                     meeting online,
                     belanja online, mengembangkan bisnis secara online, upload download, bermain game online,
-                    menayangkan sesi live dan streaming. Layanan Internet DHAHA PRIMA FIBER hadir dengan kapasitas
+                    menayangkan sesi live dan streaming. Layanan Internet Barokah NET hadir dengan kapasitas
                     bandwidth dan kecepatan akses internet secepat cahaya, biaya berlangganan yang terjangkau dengan
                     package yang bisa disesuaikan dengan kebutuhan. Memanjakan dan memberikan pengalaman terbaik kepada
-                    setiap pengguna layanan Internet DHAHA PRIMA FIBER dalam kegiatan digital di Rumah 24 jam tanpa
+                    setiap pengguna layanan Internet Barokah NET FIBER dalam kegiatan digital di Rumah 24 jam tanpa
                     perlu khawatir.</p>
                 <div class="flex flex-col mb-4 md:flex-row gap-y-4">
                     <div class="flex items-center flex-1 gap-2">
@@ -497,8 +515,9 @@
     <section class="bg-semi-sky-blue" id="produk">
         <div class="container p-5 mx-auto pb-14 pt-[120px] lg:pt-[120px] lg:pb-20 lg:px-14">
             <div class="max-w-[640px] w-full mx-auto ">
-                <p class="text-2xl font-semibold leading-9 text-start md:text-center md:text-3xl">Paket Internet DHAHA
-                    PRIMA</p>
+                <p class="text-2xl font-semibold leading-9 text-start md:text-center md:text-3xl">Paket Internet
+                    <span class="font-bold text-primary">Barokah NET</span>
+                </p>
                 <p class="mt-5 text-sm leading-6 md:text-center text-custom-text-card">Internet Secepat Cahaya dengan
                     harga
                     yang
@@ -506,7 +525,8 @@
                     terjangkau
                     dan terbaik di
                     kelasnya. Mulai dari Rp.
-                    165.000 per bulan, mau berlangganan internet? #DHAHAPRIMAinAJA</p>
+                    165.000 per bulan, mau berlangganan internet? <span class=" text-primary">#BAROKAHNETinAJA</span>
+                </p>
             </div>
 
             <div class="flex flex-wrap justify-around gap-1 mt-16 gap-y-10 w-100">
@@ -605,7 +625,7 @@
                 {{-- Background & Overlay --}}
 
                 <div class="flex flex-col w-full mx-auto justify-center lg:w-[30%] gap-4 mb-5 z-10">
-                    <img src="{{ asset('assets/images/logo.png') }}" alt="logo"
+                    <img src="{{ asset('assets/images/logo-barokahnet-footer.svg') }}" alt="logo"
                         class="w-[250px] md:m-auto lg:m-0">
                     <p
                         class="text-base font-light leading-7 text-white text-start md:text-center md:text-sm lg:text-start">
@@ -630,7 +650,7 @@
                         <div class="flex flex-wrap gap-1 anchor-link ">
                             <p class="text-sm font-semibold">Email :</p>
                             <a href="https://wa.me/6281335964620 " target="_blank"
-                                class="text-sm font-extralight">cs@DhahaPrimaNet</a>
+                                class="text-sm font-extralight">cs@BarokahNet</a>
                         </div>
                         <div class="flex flex-wrap gap-1 anchor-link">
                             <p class="text-sm font-semibold">Telepon :</p>
@@ -651,7 +671,7 @@
             </div>
             <div
                 class="flex flex-wrap justify-between gap-5 py-5 bottom-footer border-t-[1px] border-default-border-color">
-                <div class="flex gap-5">
+                {{-- <div class="flex gap-5">
                     <a href="#" class="w-[20px] h-[20px]">
                         <img src="{{ asset('assets/images/facebook-icon.svg') }}" alt="icon">
                     </a>
@@ -664,16 +684,42 @@
                     <a href="#" class="w-[20px] h-[20px]">
                         <img src="{{ asset('assets/images/youtube-icon.svg') }}" alt="icon">
                     </a>
-                </div>
-                <p class="text-sm font-light tracking-wider text-white">© 2024 PT DHAHA PRIMA NET</p>
+                </div> --}}
+                <p class="text-sm font-light tracking-wider text-white">© 2024 PT BAROKAH NET</p>
             </div>
         </div>
     </footer>
 
-    <button onclick="toTop(this)"
+    <div class="fixed z-50 flex flex-col bottom-3 right-3">
+        <div
+            class="chat-container shadow card-contact-wa transition-all duration-500 max-w-[350px] bg-white p-5 rounded flex-col gap-y-4">
+            <div class="mb-2 text-xs chat-header">
+                <p>Silahkan klik nomer kami di bawah untuk memulai percakapan di <span
+                        class="font-bold">Whatsapp</span></p>
+            </div>
+            <div class="flex flex-col chat-body gap-y-3">
+                <a href="" target="_blank" class="flex items-center gap-5 p-3 bg-semi-sky-blue">
+                    <img src="{{ asset('assets/images/fav-icon.png') }}" alt="icon" class="w-8 h-8">
+                    <p class="text-sm">+62 813-3596-4620</p>
+                </a>
+            </div>
+        </div>
+        <div class="flex items-center justify-end gap-3 p-2 contact-wa-btn">
+            <div class="flex items-center h-8 px-3 bg-white rounded shadow">
+                <p class="text-xs">Butuh bantuan? <span class="font-semibold">Hubungi kami</span></p>
+            </div>
+            <button type="button" onclick="toggleContactWA(event)"
+                class="flex items-center justify-center rounded-full cursor-pointer bg-primary w-14 h-14">
+                <i class="text-2xl text-white ri-whatsapp-line"></i>
+            </button>
+        </div>
+    </div>
+
+
+    {{-- <button onclick="toTop(this)"
         class="fixed z-50 grid w-12 h-12 rounded bg-primary bottom-8 right-8 place-items-center toTop">
-        <i class="ri-arrow-up-line"></i>
-    </button>
+        <i class="text-white ri-arrow-up-line"></i>
+    </button> --}}
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -689,63 +735,63 @@
             }, 800);
         })
 
-        window.onscroll = function() {
-            scrollFunction()
-        };
+        // window.onscroll = function() {
+        //     scrollFunction()
+        // };
 
-        function scrollFunction() {
-            const btnToTop = document.querySelector(".toTop")
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                btnToTop.style.display = "grid";
-            } else {
-                btnToTop.style.display = "none";
-            }
-        }
+        // function scrollFunction() {
+        //     const btnToTop = document.querySelector(".toTop")
+        //     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        //         btnToTop.style.display = "grid";
+        //     } else {
+        //         btnToTop.style.display = "none";
+        //     }
+        // }
 
         AOS.init();
-        const swiper = new Swiper('.swiper', {
-            direction: 'horizontal',
-            freeMode: true,
-            loop: true,
-            slidesPerView: 3,
-            centeredSlides: true,
-            spaceBetween: 40,
+        // const swiper = new Swiper('.swiper', {
+        //     direction: 'horizontal',
+        //     freeMode: true,
+        //     loop: true,
+        //     slidesPerView: 3,
+        //     centeredSlides: true,
+        //     spaceBetween: 40,
 
-            keyboard: {
-                enabled: true,
-            },
+        //     keyboard: {
+        //         enabled: true,
+        //     },
 
-            autoplay: {
-                delay: 2000,
-                disableOnInteraction: false,
-            },
+        //     autoplay: {
+        //         delay: 2000,
+        //         disableOnInteraction: false,
+        //     },
 
-            pagination: {
-                el: '.swiper-pagination',
-                dynamicBullets: true,
-                clickable: true,
-            },
+        //     pagination: {
+        //         el: '.swiper-pagination',
+        //         dynamicBullets: true,
+        //         clickable: true,
+        //     },
 
-            breakpoints: {
-                1280: {
-                    slidesPerView: 3,
-                },
-                1024: {
-                    slidesPerView: 2,
-                },
-                768: {
-                    slidesPerView: 2,
-                },
-                320: {
-                    slidesPerView: 1,
-                },
-            }
-        });
+        //     breakpoints: {
+        //         1280: {
+        //             slidesPerView: 3,
+        //         },
+        //         1024: {
+        //             slidesPerView: 2,
+        //         },
+        //         768: {
+        //             slidesPerView: 2,
+        //         },
+        //         320: {
+        //             slidesPerView: 1,
+        //         },
+        //     }
+        // });
 
-        function toTop() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
+        // function toTop() {
+        //     document.body.scrollTop = 0;
+        //     document.documentElement.scrollTop = 0;
+        // }
 
         function toggleNavbar(e) {
             let menu = document.querySelector(".menu")
@@ -769,6 +815,16 @@
                 }
             })
         })
+
+        function toggleContactWA(e) {
+            let cardContactWA = document.querySelector(".card-contact-wa")
+            let active = document.querySelector(".card-contact-wa.active")
+            if (active) {
+                active.classList.remove("active")
+            } else {
+                cardContactWA.classList.add("active")
+            }
+        }
     </script>
 
 </body>
