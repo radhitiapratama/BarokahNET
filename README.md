@@ -11,11 +11,11 @@
 - Jalankan perintah berikut
 
 ```
+composer install
+
 php artisan key:generate
 
 php artisan migrate
-
-composer install
 
 npm install
 
