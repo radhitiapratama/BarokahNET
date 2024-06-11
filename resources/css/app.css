@@ -37,6 +37,17 @@
         @apply box-border;
     }
 
+    ::-moz-selection {
+        /* Code for Firefox */
+        color: #fff;
+        background: #27AB72;
+    }
+
+    ::selection {
+        color: #fff;
+        background: #27AB72;
+    }
+
     .loading-wave {
         width: 300px;
         height: 100px;
@@ -83,6 +94,28 @@
 
     html {
         scroll-behavior: smooth;
+    }
+
+    nav {
+        position: absolute;
+        top: 0;
+    }
+
+    nav.scrolled {
+        position: fixed;
+        animation: navScrolledAnimation 500ms 1;
+        @apply border-[1px] border-default-border-color
+    }
+
+
+    @keyframes navScrolledAnimation {
+        from {
+            top: -200px;
+        }
+
+        to {
+            top: 0;
+        }
     }
 
     .remove-loader {

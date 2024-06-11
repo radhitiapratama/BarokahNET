@@ -16,7 +16,7 @@
 
 <body>
     {{-- Loader --}}
-    <div id="loader-wrapper"
+    {{-- <div id="loader-wrapper"
         class="fixed z-[200] flex items-center justify-center w-screen h-screen  bg-white transition-all ease-in-out duration-500">
         <div class="loading-wave">
             <div class="loading-bar"></div>
@@ -24,10 +24,10 @@
             <div class="loading-bar"></div>
             <div class="loading-bar"></div>
         </div>
-    </div>
+    </div> --}}
 
     {{-- Navbar --}}
-    <nav class="fixed top-0 z-[100] h-[100px] w-screen border-b-[1px] border-default-border-color bg-white">
+    <nav class="z-[100] h-[100px] w-full bg-white transition-all duration-500 ">
         <div class="container static flex flex-wrap items-center h-full mx-auto md:px-16">
             <div class="static h-full px-5">
                 <img src="{{ asset('assets/images/logo-barokahnet.svg') }}" alt="logo"
@@ -66,31 +66,65 @@
         </div>
     </nav>
 
-    <section id="beranda" class="h-max w-full relative sm:bg-none bg-contain bg-center bg-no-repeat pb-[100px]">
+    <section id="beranda"
+        class="h-max w-full relative sm:bg-none bg-contain bg-center bg-no-repeat pb-[100px] overflow-hidden ">
         {{-- Background Mobile,Tablet --}}
-        <div
+        {{-- <div
             class="absolute top-0 bottom-0 left-0 right-0 xl:hidden bg-[url('/public/assets/images/connected_wordl.svg')] bg-contain bg-[center_top_4rem] md:bg-top bg-no-repeat">
-        </div>
+        </div> --}}
 
         {{-- Background Laptop,Desktop --}}
-        <div
+        {{-- <div
             class="absolute top-0 bottom-0 left-0 right-0  bg-[url('/public/assets/images/hero-section-pattern.svg')] bg-contain sm:bg-[center_top_8rem] hidden xl:inline md:bg-top bg-no-repeat">
-        </div>
+        </div> --}}
 
-        <div class="absolute top-0 bottom-0 z-10 w-full h-full bg-white xl:hidden opacity-90">
-        </div>
+        {{-- <div class="absolute top-0 bottom-0 z-10 w-full h-full bg-white xl:hidden opacity-90">
+        </div> --}}
 
         <div
             class="container relative z-20 flex justify-around flex-wrap h-full p-5 mx-auto lg:p-16 pt-[120px] md:pt-[130px] lg:pt-[150px] gap-y-8">
             <div class="flex flex-col justify-center lg:w-[50%] w-full md:w-[55%]">
+                <div class="-z-10">
+                    <div
+                        class="rounded-full w-[300px] h-[300px] bg-primary-300 absolute  top-[-120px] right-[-150px] md:left-[50%] grid place-items-center">
+                        <div class="rounded-full w-[200px] h-[200px] bg-primary-500 grid place-items-center z-10">
+                            <div class="rounded-full w-[100px] h-[100px] bg-primary"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="-z-10">
+                    <div
+                        class="rounded-full w-[300px] h-[300px] bg-primary-300 absolute  bottom-[-150px] md:bottom-[-250px] right-[5%] grid place-items-center">
+                        <div class="rounded-full w-[200px] h-[200px] bg-primary-500 grid place-items-center z-10">
+                            <div class="rounded-full w-[100px] h-[100px] bg-primary"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="-z-10">
+                    <div
+                        class="w-[200px] h-[200px] blur-[180px] bg-primary absolute top-[30%] md:top-[50%] left-[-100px]">
+                    </div>
+                </div>
+
+                {{-- <div class="-z-10">
+                    <div
+                        class="rounded-full w-[300px] h-[300px] bg-primary-300 absolute  bottom-[100px] right-[-150px] grid place-items-center ">
+                        <div class="rounded-full w-[200px] h-[200px] bg-primary-500 grid place-items-center z-10">
+                            <div class="rounded-full w-[100px] h-[100px] bg-primary "></div>
+                        </div>
+                    </div>
+                </div> --}}
+
                 <p data-aos="fade-right" data-aos-delay="800"
-                    class="mb-2 text-xl font-bold text-secondary md:text-4xl lg:text-3xl ">
+                    class="mb-2 text-xl font-bold text-secondary md:text-2xl lg:text-3xl ">
                     PT LINK DATA SUMBER BAROKAH
                 </p>
                 <h1 data-aos="fade-right" data-aos-delay="900"
                     class="text-2xl font-bold leading-8 md:leading-10 xl:leading-[64px] xl:text-5xl lg:leading-[58px] lg:text-4xl sm:text-3xl">
                     Solusi Layanan Akses <span
-                        class="relative after:absolute after:content-[''] after:w-full after:h-1/3 after:left-0 after:bottom-0 after:bg-primary after:z-[-1]">Internet
+                        class="relative after:absolute after:content-[''] after:w-full after:h-1/3 after:left-0 after:bottom-0 after:bg-primary-300 after:z-[-1]">Internet
                         Terbaik</span> Di Kelasnya
                 </h1>
                 <p data-aos="fade-right" data-aos-delay="1000" class="my-4 mb-6 text-[16px] font-normal">
@@ -119,12 +153,12 @@
         </div>
     </section>
 
-    <section class="bg-white">
-        <div class="container relative mx-auto p-[18px] md:p-[50px]">
+    <section class="relative bg-semi-sky-blue">
+        <div class="container relative mx-auto p-[18px] md:p-[50px] md:pb-0 ">
             <img src="{{ asset('assets/images/circle.svg') }}" alt="circle"
                 class="absolute top-[-50px] w-[100px] z-10" />
 
-            <div id="profile" data-aos="fade-up" data-aos-delay="1200"
+            <div data-aos="fade-up" data-aos-delay="1200"
                 class="m-auto mt-[-120px] flex h-full min-h-[230px] w-full max-w-[900px] flex-col items-center justify-center rounded-bl-[50px] rounded-br rounded-tl rounded-tr-[50px] bg-secondary p-7 lg:px-[100px] text-white relative z-20">
                 <p class="mb-4 text-lg font-bold lg:text-2xl">
                     "BarokahNet Hadir Menjangkau Seluruh Negeri"
@@ -137,7 +171,6 @@
                     akses internet dan menjawab semua kebutuhan masyarakat di era modern.
                 </p>
             </div>
-
             {{-- <div class="mt-[80px] flex flex-col gap-[20px]">
                 @foreach ($serviceCards_1 as $card)
                     <div class="min-h-[50px] w-full rounded bg-white" data-aos="fade-up">
@@ -170,6 +203,73 @@
             </div> --}}
         </div>
     </section>
+
+    <section class="relative overflow-hidden bg-semi-sky-blue" id="profile">
+        <div class="container relative p-5 mx-auto md:p-10 ">
+
+            <div class="mt-[80px] w-full static z-20 ">
+                <img src="{{ asset('assets/images/bg-aboutme.jpeg') }}" alt="background"
+                    class="bg-cover h-[200px] md:h-[425px] w-full rounded static z-50">
+            </div>
+
+            <div class="relative z-10 py-20">
+
+                <div class="absolute bottom-[-150px] left-[-150px] ">
+                    <div class="rounded-full w-[300px] h-[300px] bg-primary-300  grid place-items-center ">
+                        <div class="rounded-full w-[200px] h-[200px] bg-primary-500 grid place-items-center z-10">
+                            <div class="rounded-full w-[100px] h-[100px] bg-primary"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="absolute right-[-50px] md:right-[-150px] top-[130px] md:top-[-50px] lg:right-0 lg:top-[-80px]">
+                    <img src="{{ asset('assets/images/papper-plane.svg') }}" alt="image"
+                        class="w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[450px]">
+                </div>
+
+                <div class="max-w-[300px] w-full">
+                    <p class="text-3xl font-normal md:text-4xl">Tentang kami</p>
+                    <p class="mt-3 ml-5 text-4xl font-semibold md:text-5xl text-primary">BarokahNet</p>
+                    <span class="block w-full h-[14px] mt-5 bg-primary"></span>
+                </div>
+
+                <div class="card-aboutme md:w-[90%] ml-auto mt-[160px] md:mt-16 bg-white relative z-50 shadow-sm cursor-pointer"
+                    data-aos="fade-up">
+                    <div class="p-8 border-b-[1px] header border-default-border-color">
+                        <div class="flex gap-5">
+                            <div class="w-6 h-6 bg-red-500 rounded-full"></div>
+                            <div class="w-6 h-6 bg-yellow-500 rounded-full"></div>
+                            <div class="w-6 h-6 bg-green-600 rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-0 px-8 body">
+                        <div class="text-[48px] text-primary">❝</div>
+                        <p class="m-0 text-xs leading-6 md:leading-8 md:text-sm text-custom-text-card">“ Saat ini
+                            internet menjadi
+                            kebutuhan
+                            sehari-hari
+                            manusia
+                            modern.
+                            Tidak hanya untuk
+                            kepentingan usaha, bisnis, atau pendidikan, internet juga dibutuhkan untuk interaksi dalam
+                            kehidupan sehari-hari seperti penggunaan media sosial dan lainnya. Minimnya fasilitas dan
+                            jaringan internet yang sulit dijangkau, terutama di beberapa wilayah di Madura, khususnya
+                            Kabupaten Sumenep, membuat sebagian masyarakat masih kesulitan untuk berinteraksi di dunia
+                            maya. Kalaupun ada beberapa provider yang memberikan layanan internet, harganya masih cukup
+                            mahal. Sebagai perusahan swasta yang bergerak di bidang layanan Internet (ISP) dengan biaya
+                            murah dan terjangkau BarokahNet hadir untuk memenuhi kebutuhan masyarakat yang selama ini
+                            sulit mendapatkan akses internet. Semoga kehadiran layanan jaringan internet murah ini bisa
+                            mempermudah banyak orang untuk mendapatkan akses internet dan menjawab semua kebutuhan
+                            masyarakat di era modern. “</p>
+                        <p class="text-[48px] text-primary ml-auto">❞</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <section class="lg:py-[70px] py-10 relative overflow-hidden">
         <div
@@ -220,11 +320,13 @@
                 </div>
                 <div class="flex flex-col mb-4 md:flex-row gap-y-4">
                     <div class="flex items-center flex-1 gap-2">
-                        <img src="{{ asset('assets/images/circle-checklist.svg') }}" alt="checklist" class="w-7 h-7">
+                        <img src="{{ asset('assets/images/circle-checklist.svg') }}" alt="checklist"
+                            class="w-7 h-7">
                         <p class="text-sm font-semibold">24 JAM CUSTOMER SERVICE</p>
                     </div>
                     <div class="flex items-center flex-1 gap-2">
-                        <img src="{{ asset('assets/images/circle-checklist.svg') }}" alt="checklist" class="w-7 h-7">
+                        <img src="{{ asset('assets/images/circle-checklist.svg') }}" alt="checklist"
+                            class="w-7 h-7">
                         <p class="text-sm font-semibold">100% OPTICAL NETWORK</p>
                     </div>
                 </div>
@@ -722,19 +824,30 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const loader = document.querySelector("#loader-wrapper")
-            setTimeout(() => {
-                loader.classList.add("remove-loader")
-                setTimeout(() => {
-                    loader.remove()
-                }, 5200);
-            }, 800);
-        })
+        AOS.init();
 
-        // window.onscroll = function() {
-        //     scrollFunction()
-        // };
+
+        // document.addEventListener("DOMContentLoaded", function() {
+        //     const loader = document.querySelector("#loader-wrapper")
+        //     setTimeout(() => {
+        //         loader.classList.add("remove-loader")
+        //         setTimeout(() => {
+        //             loader.remove()
+        //         }, 5200);
+        //     }, 800);
+        // })
+
+        window.onscroll = function() {
+            let nav = document.querySelector("nav")
+            let top = window.pageYOffset;
+            if (top > 100) {
+                nav.classList.add("scrolled")
+            } else {
+                nav.classList.remove("scrolled")
+            }
+
+            // scrollFunction()
+        };
 
         // function scrollFunction() {
         //     const btnToTop = document.querySelector(".toTop")
@@ -745,7 +858,6 @@
         //     }
         // }
 
-        AOS.init();
         // const swiper = new Swiper('.swiper', {
         //     direction: 'horizontal',
         //     freeMode: true,

@@ -31,7 +31,9 @@ export default {
         'bg-box-blue-transparent': "#CFE7FF",
         'bg-box-green-transparent': "#CEF7E8",
         'bg-box-yellow-transparent': "#FEF8CC",
-        'custom-text-card': '#6B6969'
+        'custom-text-card': '#6B6969',
+        "primary-300": "rgb(39, 171, 114,.3)",
+        "primary-500": "rgb(39, 171, 114,.5)"
       }
     }
   }
