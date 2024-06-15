@@ -164,7 +164,7 @@
         }
 
         .menu.active {
-            top: 100px;
+            top: 95px;
             opacity: 1;
         }
     }

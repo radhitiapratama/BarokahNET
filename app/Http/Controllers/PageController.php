@@ -294,4 +294,9 @@ class PageController extends Controller
             'serviceCards_1' => $this->serviceCards_1
         ]);
     }
+
+    public function profile()
+    {
+        return view("pages.profile");
+    }
 }
