@@ -631,7 +631,7 @@
                             <p class="text-4xl font-bold">{{ $priceCard['price_arr']['price'] }}</p>
                             <p class="text-xl font-light">{{ $priceCard['price_arr']['month'] }}</p>
                         </div>
-                        <a href="https://wa.me/6281335964620" target="_blank"
+                        <a href="https://wa.me/+62817770044" target="_blank"
                             class="block w-full py-3 mt-5 tracking-wide text-center text-white rounded bg-primary">
                             Klik untuk berlangganan
                         </a>
