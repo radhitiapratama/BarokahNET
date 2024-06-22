@@ -105,12 +105,11 @@
 
                 <p data-aos="fade-right" data-aos-delay="800"
                     class="mb-2 text-xl font-medium text-white md:text-2xl lg:text-3xl ">
-                    PT LINK DATA SUMBER BAROKAH
+                    INTERNET SERVICE PROVIDER
                 </p>
                 <h1 data-aos="fade-right" data-aos-delay="900"
                     class="text-2xl font-bold leading-8 md:leading-10 xl:leading-[64px] xl:text-5xl lg:leading-[58px] lg:text-4xl sm:text-3xl text-white">
-                    Solusi Layanan Akses <span class="text-primary"> Internet
-                        Terbaik </span> Di Kelasnya
+                    PT Link<span class="text-primary"> Data Sumber Barokah</span>
                 </h1>
                 <p data-aos="fade-right" data-aos-delay="1000" class="my-4 mb-6 text-[16px] font-normal text-white">
                     Nikmati layanan akses internet fiber optic berkecapatan
