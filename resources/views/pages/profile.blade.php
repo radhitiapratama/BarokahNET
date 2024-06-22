@@ -63,7 +63,7 @@
                 </li>
             </ul>
             <div class="grid w-8 h-8 ml-auto mr-5 place-items-center md:hidden" onclick="toggleNavbar(event)">
-                <i class="ri-menu-line ri-xl" id="hamburger-icon"></i>
+                <i class="ri-menu-line ri-xl"></i>
             </div>
         </div>
     </nav>
