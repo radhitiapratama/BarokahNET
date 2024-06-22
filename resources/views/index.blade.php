@@ -69,11 +69,12 @@
         </div>
     </nav>
 
-
     <section id="beranda"
         class="h-max w-full relative bg-[url('/public/assets/images/bg-hero.svg')] bg-cover bg-center bg-no-repeat pb-[100px] overflow-hidden ">
         <div class="bg-layer"></div>
-        <img src="{{ asset('assets/images/wave-home.svg') }}" class="wave-home" alt="wave-bg">
+        <img src="{{ asset('assets/images/wave-home.svg') }}"
+            class="wave-home absolute w-screen left-0 bottom-[-20px] md:bottom-[-30px] lg:bottom-[-100px]"
+            alt="wave-bg">
         <div
             class="container relative z-20 flex justify-around flex-wrap h-full p-5 mx-auto lg:p-16 pt-[120px] md:pt-[130px] lg:pt-[150px] gap-y-8 ">
             <div class="flex flex-col justify-center lg:w-[50%] w-full md:w-[55%]">
@@ -272,7 +273,8 @@
                 </div>
             </div>
         </div>
-        <img src="{{ asset('assets/images/wave-about-me.svg') }}" class="z-20 wave-aboutme" alt="wave-aboutme">
+        <img src="{{ asset('assets/images/wave-about-me.svg') }}"
+            class="z-20 wave-aboutme w-screen absolute bottom-0 left-0 lg:bottom-[-50px]" alt="wave-aboutme">
     </section>
 
     <section class="lg:py-[70px] py-10 relative overflow-hidden">

@@ -128,19 +128,19 @@
         color: #242424;
     }
 
-    .wave-home {
-        width: 100%;
+    /* .wave-home {
+        width: 100vw;
         position: absolute;
         bottom: -125px;
         left: 0;
-    }
+    } */
 
-    .wave-aboutme {
+    /* .wave-aboutme {
         width: 100%;
         position: absolute;
         bottom: -50px;
         left: 0;
-    }
+    } */
 
     #beranda .bg-layer {
         width: 100%;
