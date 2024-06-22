@@ -16,7 +16,7 @@
 
 <body>
     {{-- Loader --}}
-    {{-- <div id="loader-wrapper"
+    <div id="loader-wrapper"
         class="fixed z-[200] flex items-center justify-center w-screen h-screen  bg-white transition-all ease-in-out duration-500">
         <div class="loading-wave">
             <div class="loading-bar"></div>
@@ -24,7 +24,7 @@
             <div class="loading-bar"></div>
             <div class="loading-bar"></div>
         </div>
-    </div> --}}
+    </div>
 
     {{-- Navbar --}}
     <nav class="z-[100] h-[100px] w-full transition-all duration-500">
@@ -427,13 +427,13 @@
         AOS.init();
 
         document.addEventListener("DOMContentLoaded", function() {
-            // const loader = document.querySelector("#loader-wrapper")
-            // setTimeout(() => {
-            //     loader.classList.add("remove-loader")
-            //     setTimeout(() => {
-            //         loader.remove()
-            //     }, 5200);
-            // }, 800);
+            const loader = document.querySelector("#loader-wrapper")
+            setTimeout(() => {
+                loader.classList.add("remove-loader")
+                setTimeout(() => {
+                    loader.remove()
+                }, 5200);
+            }, 800);
         })
 
         window.onscroll = function() {
