@@ -20,6 +20,7 @@ export default {
       colors: {
         "primary": "#27AB72",
         "secondary": '#2B6F6E',
+        "dark-secondary": '#014832',
         "custom-dark": '#333333',
         'default-border-color': '#E1E1E1',
         'semi-sky-blue': '#F2F5FB',

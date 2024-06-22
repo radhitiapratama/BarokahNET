@@ -26,14 +26,17 @@
         </div>
     </div>
 
-    <nav class="z-[100] h-[100px] w-full bg-white transition-all duration-500 ">
-        <div class="container relative flex flex-wrap items-center h-full mx-auto md:px-16">
-            <div class="static h-full px-5">
+    <nav class="z-[100] h-[100px] w-full transition-all duration-500">
+        <div class="container static flex flex-wrap items-center h-full mx-auto -z-10 md:px-16">
+            <div class="h-full px-5">
                 <img src="{{ asset('assets/images/logo-barokahnet.svg') }}" alt="logo"
-                    class="object-contain w-32 h-full md:w-52" />
+                    class="object-contain h-full w-44 logo md:w-52" />
             </div>
             <ul
-                class="absolute gap-y-7 px-5 flex flex-col flex-wrap py-6 bg-white w-full md:ml-auto md:w-[60%] md:static md:flex-row md:items-center md:justify-end md:gap-7 md:flex menu z-[-1] md:z-10">
+                class="menu fixed top-0 w-[70%] shadow-sm h-screen md:h-max left-0 gap-y-7 px-5 flex flex-col flex-wrap py-6 z-50 md:bg-inherit md:ml-auto md:w-[60%] md:static  md:flex-row md:items-center md:justify-end md:gap-7 md:flex md:z-10">
+                <img src="{{ asset('assets/images/logo-barokahnet.svg') }}" class="block object-contain w-48 md:hidden"
+                    alt="logo">
+                <div class="divider w-full h-[1px] bg-default-border-color md:hidden"></div>
                 <li class="menu-item">
                     <a href="/#beranda"
                         class="relative font-medium after:absolute after:bottom-[-5px] after:left-0 after:h-[2px] after:w-0 after:rounded-md after:bg-primary after:transition-all after:duration-300 after:content-[''] hover:after:w-full">
@@ -42,7 +45,7 @@
                 </li>
                 <li class="menu-item">
                     <a href="#profile"
-                        class="after:transition-all relative font-medium after:absolute after:bottom-[-5px] after:left-0 after:h-[2px] after:w-full after:rounded-md after:bg-primary after:duration-300 after:content-[''] hover:after:w-full">
+                        class="after:transition-all relative font-medium after:absolute after:bottom-[-5px] after:left-0 after:h-[2px] after:w-0 after:rounded-md after:bg-primary after:duration-300 after:content-[''] hover:after:w-full">
                         Profile
                     </a>
                 </li>
@@ -60,13 +63,13 @@
                 </li>
             </ul>
             <div class="grid w-8 h-8 ml-auto mr-5 place-items-center md:hidden" onclick="toggleNavbar(event)">
-                <i class="ri-menu-line ri-xl"></i>
+                <i class="ri-menu-line ri-xl" id="hamburger-icon"></i>
             </div>
         </div>
     </nav>
 
 
-    <section class="relative overflow-hidden bg-semi-sky-blue" id="profile">
+    <section class="relative overflow-hidden bg-semi-sky-blue">
         <div class="container relative p-5 mx-auto md:p-10 ">
 
             <div class="mt-[80px] w-full static z-20 ">
@@ -74,15 +77,27 @@
                     class="bg-cover h-[200px] md:h-[425px] w-full rounded static z-50">
             </div>
 
-            <div class="relative z-10 pb-20 pt-28">
+            <div class="relative z-10 py-20 pb-[120px]">
 
-                <div class="absolute bottom-[-150px] left-[-150px] ">
+                <div class="absolute top-[250px] left-[-200px] ">
                     <div class="rounded-full w-[300px] h-[300px] bg-primary-300  grid place-items-center ">
                         <div class="rounded-full w-[200px] h-[200px] bg-primary-500 grid place-items-center z-10">
                             <div class="rounded-full w-[100px] h-[100px] bg-primary"></div>
                         </div>
                     </div>
                 </div>
+                <div class="absolute top-[450px] left-[-200px] ">
+                    <div class="rounded-full w-[300px] h-[300px] bg-primary-300  grid place-items-center ">
+                        <div class="rounded-full w-[200px] h-[200px] bg-primary-500 grid place-items-center z-10">
+                            <div class="rounded-full w-[100px] h-[100px] bg-primary"></div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- <img src="{{ asset('assets/images/blob-hotspot.svg') }}" class="absolute right-[30%] top-8"
+                    alt="blob-hotspot">
+                <img src="{{ asset('assets/images/blob-router.svg') }}" class="absolute right-[0%] top-8"
+                    alt="blob-router"> --}}
 
                 <div
                     class="absolute right-[-50px] md:right-[-150px] top-[130px] md:top-[-50px] lg:right-0 lg:top-[-80px]">
@@ -91,13 +106,16 @@
                 </div>
 
                 <div class="max-w-[300px] w-full">
-                    <p class="text-3xl font-normal md:text-4xl">Tentang kami</p>
-                    <p class="mt-3 ml-5 text-4xl font-semibold md:text-5xl text-primary">BarokahNet</p>
-                    <span class="block w-full h-[14px] mt-5 bg-primary"></span>
+                    <p class="text-3xl font-normal md:text-4xl" data-aos="fade-right">Tentang kami</p>
+                    <p class="mt-3 ml-5 text-4xl font-semibold md:text-5xl text-primary" data-aos="fade-right"
+                        data-aos-delay="300">BarokahNet</p>
+                    <span class="block w-full h-[14px] mt-5 bg-primary" data-aos="fade-up" data-aos-delay="500"></span>
                 </div>
 
                 <div class="card-aboutme md:w-[90%] ml-auto mt-[160px] md:mt-16 bg-white relative z-50 shadow-sm cursor-pointer"
                     data-aos="fade-up">
+
+
                     <div class="p-8 border-b-[1px] header border-default-border-color">
                         <div class="flex gap-5">
                             <div class="w-6 h-6 bg-red-500 rounded-full"></div>
@@ -124,10 +142,10 @@
                             sulit mendapatkan akses internet. Semoga kehadiran layanan jaringan internet murah ini bisa
                             mempermudah banyak orang untuk mendapatkan akses internet dan menjawab semua kebutuhan
                             masyarakat di era modern. “</p>
-                        <div class="flex items-center justify-end my-2 ">
-                            {{-- <a href="{{ url('about') }}"
+                        <div class="flex items-center justify-between my-2 ">
+                            <a href="{{ url('profile') }}"
                                 class="m-0 text-base font-medium text-primary hover:opacity-80 h-max">Read More <i
-                                    class="text-base ri-arrow-right-line"></i> </a> --}}
+                                    class="text-base ri-arrow-right-line"></i> </a>
                             <p class="text-[48px] text-primary h-max">❞</p>
                         </div>
                     </div>
@@ -181,6 +199,7 @@
 
         window.onscroll = function() {
             let nav = document.querySelector("nav")
+            let nav_image = nav.querySelector(".logo")
             let top = window.pageYOffset;
             if (top > 100) {
                 nav.classList.add("scrolled")

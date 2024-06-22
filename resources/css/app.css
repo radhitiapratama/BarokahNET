@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+    :root {
+        --primary: #27AB72;
+        --secondary: #2B6F6E;
+        --dark-secondary: #014832;
+        --semi-sky-blue: #F2F5FB;
+        --white: #fff;
+    }
+
     @font-face {
         font-family: "Montserrat";
         font-weight: 300;
@@ -99,14 +107,50 @@
     nav {
         position: absolute;
         top: 0;
+        background: transparent;
+    }
+
+    nav #hamburger-icon {
+        color: var(--white);
+    }
+
+    nav.scrolled #hamburger-icon {
+        color: #000;
     }
 
     nav.scrolled {
         position: fixed;
         animation: navScrolledAnimation 500ms 1;
-        @apply border-[1px] border-default-border-color
+        background-color: var(--white);
     }
 
+    nav.scrolled ul li {
+        color: #242424;
+    }
+
+    .wave-home {
+        width: 100%;
+        position: absolute;
+        bottom: -125px;
+        left: 0;
+    }
+
+    .wave-aboutme {
+        width: 100%;
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+    }
+
+    #beranda .bg-layer {
+        width: 100%;
+        height: 100%;
+        background: var(--dark-secondary);
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: .9;
+    }
 
     @keyframes navScrolledAnimation {
         from {
@@ -155,17 +199,20 @@
     }
 
     @media (max-width: 767px) {
+        nav ul a {
+            color: #000;
+        }
+
         .menu {
             transition: all;
             transition-duration: 300ms;
             transition-timing-function: ease-in-out;
-            opacity: 0;
-            top: -400px;
+            background-color: var(--white);
+            left: -100% !important;
         }
 
         .menu.active {
-            top: 95px;
-            opacity: 1;
+            left: 0 !important;
         }
     }
 

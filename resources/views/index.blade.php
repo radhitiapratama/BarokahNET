@@ -16,7 +16,7 @@
 
 <body>
     {{-- Loader --}}
-    <div id="loader-wrapper"
+    {{-- <div id="loader-wrapper"
         class="fixed z-[200] flex items-center justify-center w-screen h-screen  bg-white transition-all ease-in-out duration-500">
         <div class="loading-wave">
             <div class="loading-bar"></div>
@@ -24,17 +24,20 @@
             <div class="loading-bar"></div>
             <div class="loading-bar"></div>
         </div>
-    </div>
+    </div> --}}
 
     {{-- Navbar --}}
-    <nav class="z-[100] h-[100px] w-full bg-white transition-all duration-500 ">
-        <div class="container static flex flex-wrap items-center h-full mx-auto md:px-16">
-            <div class="static h-full px-5">
-                <img src="{{ asset('assets/images/logo-barokahnet.svg') }}" alt="logo"
-                    class="object-contain w-32 h-full md:w-52" />
+    <nav class="z-[100] h-[100px] w-full transition-all duration-500">
+        <div class="container static flex flex-wrap items-center h-full mx-auto -z-10 md:px-16">
+            <div class="h-full px-5">
+                <img src="{{ asset('assets/images/logo-barokahnet-footer.svg') }}" alt="logo"
+                    class="object-contain h-full w-44 logo md:w-52" />
             </div>
             <ul
-                class="absolute gap-y-7 px-5 flex flex-col flex-wrap py-6 bg-white w-full md:ml-auto md:w-[60%] md:static md:flex-row md:items-center md:justify-end md:gap-7 md:flex menu z-[-1] md:z-10">
+                class="menu fixed top-0 w-[70%] shadow-sm h-screen md:h-max left-0 gap-y-7 px-5 flex flex-col flex-wrap py-6 z-50 md:bg-inherit md:ml-auto md:w-[60%] md:static text-white md:flex-row md:items-center md:justify-end md:gap-7 md:flex md:z-10">
+                <img src="{{ asset('assets/images/logo-barokahnet.svg') }}" class="block object-contain w-48 md:hidden"
+                    alt="logo">
+                <div class="divider w-full h-[1px] bg-default-border-color md:hidden"></div>
                 <li class="menu-item">
                     <a href="#beranda"
                         class="relative font-medium after:absolute after:bottom-[-5px] after:left-0 after:h-[2px] after:w-0 after:rounded-md after:bg-primary after:transition-all after:duration-300 after:content-[''] hover:after:w-full">
@@ -61,18 +64,20 @@
                 </li>
             </ul>
             <div class="grid w-8 h-8 ml-auto mr-5 place-items-center md:hidden" onclick="toggleNavbar(event)">
-                <i class="ri-menu-line ri-xl"></i>
+                <i class="ri-menu-line ri-xl" id="hamburger-icon"></i>
             </div>
         </div>
     </nav>
 
 
     <section id="beranda"
-        class="h-max w-full relative sm:bg-none bg-contain bg-center bg-no-repeat pb-[100px] overflow-hidden ">
+        class="h-max w-full relative bg-[url('/public/assets/images/bg-hero.svg')] bg-cover bg-center bg-no-repeat pb-[100px] overflow-hidden ">
+        <div class="bg-layer"></div>
+        <img src="{{ asset('assets/images/wave-home.svg') }}" class="wave-home" alt="wave-bg">
         <div
-            class="container relative z-20 flex justify-around flex-wrap h-full p-5 mx-auto lg:p-16 pt-[120px] md:pt-[130px] lg:pt-[150px] gap-y-8">
+            class="container relative z-20 flex justify-around flex-wrap h-full p-5 mx-auto lg:p-16 pt-[120px] md:pt-[130px] lg:pt-[150px] gap-y-8 ">
             <div class="flex flex-col justify-center lg:w-[50%] w-full md:w-[55%]">
-                <div class="-z-10">
+                {{-- <div class="-z-10">
                     <div
                         class="rounded-full w-[300px] h-[300px] bg-primary-300 absolute  top-[-120px] right-[-150px] md:left-[50%] grid place-items-center">
                         <div class="rounded-full w-[200px] h-[200px] bg-primary-500 grid place-items-center z-10">
@@ -94,28 +99,20 @@
                     <div
                         class="w-[200px] h-[200px] blur-[180px] bg-primary absolute top-[30%] md:top-[50%] left-[-100px]">
                     </div>
-                </div>
-
-                {{-- <div class="-z-10">
-                    <div
-                        class="rounded-full w-[300px] h-[300px] bg-primary-300 absolute  bottom-[100px] right-[-150px] grid place-items-center ">
-                        <div class="rounded-full w-[200px] h-[200px] bg-primary-500 grid place-items-center z-10">
-                            <div class="rounded-full w-[100px] h-[100px] bg-primary "></div>
-                        </div>
-                    </div>
                 </div> --}}
 
+                {{-- <img src="{{ asset('assets/images/bg-hero.svg') }}" alt=""> --}}
+
                 <p data-aos="fade-right" data-aos-delay="800"
-                    class="mb-2 text-xl font-bold text-secondary md:text-2xl lg:text-3xl ">
+                    class="mb-2 text-xl font-medium text-white md:text-2xl lg:text-3xl ">
                     PT LINK DATA SUMBER BAROKAH
                 </p>
                 <h1 data-aos="fade-right" data-aos-delay="900"
-                    class="text-2xl font-bold leading-8 md:leading-10 xl:leading-[64px] xl:text-5xl lg:leading-[58px] lg:text-4xl sm:text-3xl">
-                    Solusi Layanan Akses <span
-                        class="relative after:absolute after:content-[''] after:w-full after:h-1/3 after:left-0 after:bottom-0 after:bg-primary-300 after:z-[-1]">Internet
-                        Terbaik</span> Di Kelasnya
+                    class="text-2xl font-bold leading-8 md:leading-10 xl:leading-[64px] xl:text-5xl lg:leading-[58px] lg:text-4xl sm:text-3xl text-white">
+                    Solusi Layanan Akses <span class="text-primary"> Internet
+                        Terbaik </span> Di Kelasnya
                 </h1>
-                <p data-aos="fade-right" data-aos-delay="1000" class="my-4 mb-6 text-[16px] font-normal">
+                <p data-aos="fade-right" data-aos-delay="1000" class="my-4 mb-6 text-[16px] font-normal text-white">
                     Nikmati layanan akses internet fiber optic berkecapatan
                     tinggi dengan nyaman, aman & stabilitas di atas
                     rata-rata. Mulai Dari: Rp. 165.000 / Bulan
@@ -127,8 +124,8 @@
                         Daftar Sekarang
                     </a>
                     <a data-aos="fade-right" data-aos-delay="1100" href="#produk"
-                        class="flex items-center gap-2 px-5 py-2 text-sm font-bold tracking-wide uppercase border-2 rounded-full border-primary w-max text-primary">
-                        <i class="text-xl ri-router-line text-primary"></i>
+                        class="flex items-center gap-2 px-5 py-2 text-sm font-bold tracking-wide text-white uppercase border-2 rounded-full border-primary w-max">
+                        <i class="text-xl text-white ri-router-line"></i>
                         Produk Kami
                     </a>
                 </div>
@@ -200,15 +197,27 @@
                     class="bg-cover h-[200px] md:h-[425px] w-full rounded static z-50">
             </div> --}}
 
-            <div class="relative z-10 py-20">
+            <div class="relative z-10 py-20 pb-[120px]">
 
-                <div class="absolute bottom-[-150px] left-[-150px] ">
+                <div class="absolute top-[250px] left-[-200px] ">
                     <div class="rounded-full w-[300px] h-[300px] bg-primary-300  grid place-items-center ">
                         <div class="rounded-full w-[200px] h-[200px] bg-primary-500 grid place-items-center z-10">
                             <div class="rounded-full w-[100px] h-[100px] bg-primary"></div>
                         </div>
                     </div>
                 </div>
+                <div class="absolute top-[450px] left-[-200px] ">
+                    <div class="rounded-full w-[300px] h-[300px] bg-primary-300  grid place-items-center ">
+                        <div class="rounded-full w-[200px] h-[200px] bg-primary-500 grid place-items-center z-10">
+                            <div class="rounded-full w-[100px] h-[100px] bg-primary"></div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- <img src="{{ asset('assets/images/blob-hotspot.svg') }}" class="absolute right-[30%] top-8"
+                    alt="blob-hotspot">
+                <img src="{{ asset('assets/images/blob-router.svg') }}" class="absolute right-[0%] top-8"
+                    alt="blob-router"> --}}
 
                 <div
                     class="absolute right-[-50px] md:right-[-150px] top-[130px] md:top-[-50px] lg:right-0 lg:top-[-80px]">
@@ -226,6 +235,8 @@
 
                 <div class="card-aboutme md:w-[90%] ml-auto mt-[160px] md:mt-16 bg-white relative z-50 shadow-sm cursor-pointer"
                     data-aos="fade-up">
+
+
                     <div class="p-8 border-b-[1px] header border-default-border-color">
                         <div class="flex gap-5">
                             <div class="w-6 h-6 bg-red-500 rounded-full"></div>
@@ -262,6 +273,7 @@
                 </div>
             </div>
         </div>
+        <img src="{{ asset('assets/images/wave-about-me.svg') }}" class="z-20 wave-aboutme" alt="wave-aboutme">
     </section>
 
     <section class="lg:py-[70px] py-10 relative overflow-hidden">
@@ -303,11 +315,13 @@
                     perlu khawatir.</p>
                 <div class="flex flex-col mb-4 md:flex-row gap-y-4">
                     <div class="flex items-center flex-1 gap-2">
-                        <img src="{{ asset('assets/images/circle-checklist.svg') }}" alt="checklist" class="w-7 h-7">
+                        <img src="{{ asset('assets/images/circle-checklist.svg') }}" alt="checklist"
+                            class="w-7 h-7">
                         <p class="text-sm font-semibold">UPLOAD & DOWNLOAD SIMETRIS 1:1</p>
                     </div>
                     <div class="flex items-center flex-1 gap-2">
-                        <img src="{{ asset('assets/images/circle-checklist.svg') }}" alt="checklist" class="w-7 h-7">
+                        <img src="{{ asset('assets/images/circle-checklist.svg') }}" alt="checklist"
+                            class="w-7 h-7">
                         <p class="text-sm font-semibold">UNLIMITED TANPA KUOTA / FUP</p>
                     </div>
                 </div>
@@ -326,281 +340,7 @@
             </div>
         </div>
 
-        {{-- <div
-            class="container relative flex flex-wrap-reverse gap-5 p-5 mx-auto mb-10 overflow-visible lg:p-5 lg:px-20">
-            <img src="{{ asset('assets/images/multiple-circle-bg-secondary.svg') }}" alt="icon"
-                class="absolute w-[100px] right-[-40px] top-0">
-
-            <div class="flex flex-col flex-1 relative z-10 w-full lg:w-[60%]">
-                <p class="lg:text-4xl lg:leading-[52px] leading-8 text-xl font-bold mb-4 md:text-center lg:text-start">
-                    Konektivitas Internet
-                    Perhotelan
-                    Kekinian
-                </p>
-                <p class="mb-6 text-xs leading-6 md:leading-7 md:text-sm">DHAHA PRIMA HOSPITALITY MANAGED SERVICE
-                    memberikan solusi
-                    tepat guna
-                    yang dapat disesuaikan dan aman untuk memenuhi kebutuhaan serta harapan staf dan tamu akan
-                    konektivitas internet perhotelan yang kekinian. dengan kemampuan menjaga kualitas layanan tetap
-                    sempurna pada jam sibuk, menyederhanakan manajemen operasional perangkat jaringan internet
-                    perhotelan, dan menjamin keamanan lalu lintas data pada jaringan internet perhotelan. DHAHA PRIMA
-                    HOSPITALITY MANAGED SERVICE memiliki jam terbang tinggi serta pengalaman panjang bertahun-tahun dan
-                    didukung oleh tenaga ahli bersertifikasi profesional untuk memberikan solusi terbaik konektivitas
-                    internet perhotelan kekinian.</p>
-                <div class="flex flex-col mb-4 md:flex-row gap-y-4">
-                    <div class="flex items-center flex-1 gap-2">
-                        <img src="{{ asset('assets/images/circle-checklist.svg') }}" alt="checklist"
-                            class="w-7 h-7">
-                        <p class="text-sm font-semibold">DUKUNGAN TEKNIS PENUH</p>
-                    </div>
-                    <div class="flex items-center flex-1 gap-2">
-                        <img src="{{ asset('assets/images/circle-checklist.svg') }}" alt="checklist"
-                            class="w-7 h-7">
-                        <p class="text-sm font-semibold">HANDAL & HEMAT BIAYA</p>
-                    </div>
-                </div>
-                <div class="flex flex-col mb-4 md:flex-row gap-y-4">
-                    <div class="flex items-center flex-1 gap-2">
-                        <img src="{{ asset('assets/images/circle-checklist.svg') }}" alt="checklist"
-                            class="w-7 h-7">
-                        <p class="text-sm font-semibold">TEKNOLOGI KELAS DUNIA</p>
-                    </div>
-                    <div class="flex items-center flex-1 gap-2">
-                        <img src="{{ asset('assets/images/circle-checklist.svg') }}" alt="checklist"
-                            class="w-7 h-7">
-                        <p class="text-sm font-semibold">100% TINGKAT KEPUASAN PELANGGAN</p>
-                    </div>
-                </div>
-            </div>
-            <div class="flex items-center justify-center w-full lg:w-[40%] relative z-10 ">
-                <img src="{{ asset('assets/images/best_place.svg') }}" alt="image"
-                    class="w-[280px] md:w-[350px]">
-            </div>
-        </div> --}}
     </section>
-
-    {{-- <section class="bg-secondary">
-        <div
-            class="container flex flex-wrap items-center justify-center px-4 mx-auto text-white lg:px-10 lg:justify-center py-14 gap-y-4 gap-x-4">
-
-            <div class="lg:max-w-[250px] max-w-[320px] h-[120px] w-full flex items-center gap-4">
-                <div class="w-[40%]">
-                    <div class="flex justify-center items-center w-[100px] h-[100px] border-4 rounded-full">
-                        <p class="font-semibold ">100%</p>
-                    </div>
-                </div>
-                <div class="flex flex-col justify-center w-[60%]">
-                    <p class="font-light uppercase">fiber optic</p>
-                    <p class="font-bold uppercase">Infra</p>
-                </div>
-            </div>
-
-            <div class="lg:max-w-[250px] max-w-[320px] h-[120px] w-full flex  items-center gap-4  ">
-                <div class="w-[40%]">
-                    <div class="flex justify-center items-center w-[100px] h-[100px] border-4 rounded-full">
-                        <p class="font-semibold ">100%</p>
-                    </div>
-                </div>
-                <div class="flex flex-col justify-center w-[60%]">
-                    <p class="font-light uppercase">TINGKAT</p>
-                    <p class="font-bold uppercase">SLA</p>
-                </div>
-            </div>
-
-            <div class="lg:max-w-[250px] max-w-[320px] h-[120px]  w-full flex  items-center  gap-4  ">
-                <div class="w-[40%]">
-                    <div class="flex justify-center items-center w-[100px] h-[100px] border-4 rounded-full">
-                        <p class="font-semibold ">100%</p>
-                    </div>
-                </div>
-                <div class="flex flex-col justify-center w-[60%]">
-                    <p class="font-light uppercase">DUKUNGAN TEKNIS</p>
-                    <p class="font-bold uppercase">24/7</p>
-                </div>
-            </div>
-
-            <div class="lg:max-w-[250px] max-w-[320px] h-[120px]  w-full flex   items-center gap-4  ">
-                <div class="w-[40%]">
-                    <div class="flex justify-center items-center w-[100px] h-[100px] border-4 rounded-full">
-                        <p class="font-semibold ">100%</p>
-                    </div>
-                </div>
-                <div class="flex flex-col justify-center w-[60%]">
-                    <p class="font-light uppercase">TANPA BATASAN</p>
-                    <p class="font-bold uppercase">Kuota</p>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
-    {{-- Service Section --}}
-    {{-- <section class="bg-semi-sky-blue">
-        <div class="container px-5 py-20 mx-auto lg:py-20 lg:px-20">
-            <p class="text-2xl font-semibold text-start md:text-center lg:text-4xl">Kami Persembahkan Beberapa Layanan
-                Unggulan</p>
-            <p class="mt-6 text-sm text-start md:text-center md:text-base">Berikut adalah produk dan layanan yang kami
-                berikan dengan
-                penuh
-                dedikasi untuk
-                memberikan solusi terbaik
-                dan tepat guna.</p>
-
-            <div class="flex flex-wrap items-center justify-center mt-10 lg:mt-20 gap-y-12 gap-x-5 lg:justify-evenly">
-                <div class="card-service max-w-[350px] w-full min-h-[400px] h-full bg-white rounded p-10"
-                    data-aos="fade-up">
-                    <div class="w-[80px] h-[80px] flex items-center justify-center bg-bg-box-cyan-transparent rounded">
-                        <img src="{{ asset('assets/images/global-line.svg') }}" alt="icon">
-                    </div>
-                    <p class="mt-6 font-semibold">INTERNET SERVICE PROVIDER</p>
-                    <p class="mt-5 text-xs leading-6 text-custom-text-card">Jasa layanan sambungan internet yang dapat
-                        disesuaikan
-                        dengan kebutuhan
-                        masing-masing, baik itu
-                        layanan Internet Broadband dan Layanan Internet Dedicated untuk pengguna rumahan ataupun
-                        kebutuhan berbagai macam industri</p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="200"
-                    class="card-service max-w-[350px] w-full min-h-[400px] h-full bg-white rounded p-10">
-                    <div
-                        class="w-[80px] h-[80px] flex items-center justify-center bg-bg-box-purple-transparent rounded">
-                        <img src="{{ asset('assets/images/server-line.svg') }}" alt="icon">
-                    </div>
-                    <p class="mt-6 font-semibold">CO LOCATION</p>
-                    <p class="mt-5 text-xs leading-6 text-custom-text-card">Colocation (terkadang disebut sebagai
-                        “Colo”) adalah layanan penyewaan ruang untuk penempatan server dan perangkat keras komputasi
-                        lainnya seperti router, switch dan sebagainya pada fasilitas Datacenter yang kami kelola di
-                        berbagai daerah.</p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="400"
-                    class="card-service max-w-[350px] w-full min-h-[400px] h-full bg-white rounded p-10">
-                    <div class="w-[80px] h-[80px] flex items-center justify-center bg-bg-box-blue-transparent rounded">
-                        <img src="{{ asset('assets/images/router-line.svg') }}" alt="icon">
-                    </div>
-                    <p class="mt-6 font-semibold">MANAGED SERVICE INTERNET</p>
-                    <p class="mt-5 text-xs leading-6 text-custom-text-card">JMerupakan solusi managed service internet
-                        berupa layanan konektivitas internet, pemantauan serta pengelolaan jaringan di berbagai macam
-                        indsutri secara end-to-end pada network device maupun carriage dengan proaktif dan realtime.</p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="600"
-                    class="card-service max-w-[350px] w-full min-h-[400px] h-full bg-white rounded p-10">
-                    <div class="w-[80px] h-[80px] flex items-center justify-center bg-bg-box-blue-transparent rounded">
-                        <img src="{{ asset('assets/images/base-station-line.svg') }}" alt="icon">
-                    </div>
-                    <p class="mt-6 font-semibold">METRO-E, VPN & V-SAT</p>
-                    <p class="mt-5 text-xs leading-6 text-custom-text-card">Digital Connectivity Service yang melayani
-                        kebutuhan komunikasi atau konektivitas perusahaan dan berbagai macam industri yang memiliki
-                        kantor pusat serta beberapa kantor cabang untuk dapat di hubungkan melalui Layanan METRO-E, VPN
-                        & V-SAT.</p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="800"
-                    class="card-service max-w-[350px] w-full min-h-[400px] h-full bg-white rounded p-10">
-                    <div
-                        class="w-[80px] h-[80px] flex items-center justify-center bg-bg-box-green-transparent rounded">
-                        <img src="{{ asset('assets/images/cloud-line.svg') }}" alt="icon">
-                    </div>
-                    <p class="mt-6 font-semibold">CLOUD SERVICE</p>
-                    <p class="mt-5 text-xs leading-6 text-custom-text-card">Layanan yang menawarkan ruang penyimpanan
-                        yang bisa digunakan untuk keperluan dan kebutuhan satu entitas bisnis yang bersifat pribadi atau
-                        eksklusif yang bisa di akses secara realtime dengan keamanan tingkat tinggi dan terjamin
-                        kerahasiaannya.</p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="1000"
-                    class="card-service max-w-[350px] w-full min-h-[400px] h-full bg-white rounded p-10">
-                    <div
-                        class="w-[80px] h-[80px] flex items-center justify-center bg-bg-box-yellow-transparent rounded">
-                        <img src="{{ asset('assets/images/user-voice-line.svg') }}" alt="icon">
-                    </div>
-                    <p class="mt-6 font-semibold">IT CONSULTING & SERVICE</p>
-                    <p class="mt-5 text-xs leading-6 text-custom-text-card">Adalah layanan konsultasi seputar IT dengan
-                        tenaga ahli profesional dan berpengalaman untuk membantu dalam merancang, menerapkan,
-                        optimalisasi, perbaikan serta pengelolan aset yang tepat guna dengan analisa yang akurat.</p>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
-    {{-- Company use our service --}}
-    {{-- <section>
-        <div class="container relative p-5 mx-auto overflow-hidden py-14 lg:p-20">
-            <div class="circle-1 w-[500px] h-[85px] bg-primary blur-[180px] z-[-1] rotate-45 absolute left-0 top-52">
-            </div>
-
-            <div
-                class="circle-1 w-[400px] h-[85px] bg-primary blur-[180px] z-[-1] rotate-[130deg] absolute right-10 top-96 ">
-            </div>
-
-            <div class="flex flex-col flex-wrap justify-start lg:flex-row lg:justify-between">
-                <div class="lg:w-[45%] w-full ">
-                    <p
-                        class="text-xl md:text-3xl md:leading-10 font-bold mb-5 lg:text-4xl lg:leading-[52px] lg:mb-5 lg:font-semibold">
-                        Berbagai
-                        Industri yang
-                        Menggunakan
-                        Layanan Kami
-                    </p>
-                    <p class="mb-10 text-sm lg:text-xl lg:leading-8">Kami memiliki Sumber Daya Manusia profesional di
-                        bidangnya dan
-                        menggunakan
-                        perangkat
-                        telekomunikasi
-                        yang diproduksi oleh perusahaan kelas dunia untuk memenuhi kebutuhan industri.</p>
-                </div>
-                <div class="lg:w-[50%] w-full flex flex-col items-center lg:items-start md:flex-row lg:flex-col gap-5">
-                    <div data-aos="fade-up"
-                        class="max-w-[340px] min-h-[85px] w-full h-[85px] flex p-5 bg-secondary rounded items-center gap-3">
-                        <img src="{{ asset('assets/images/bxs-factory.svg') }}" alt="icon"
-                            class="w-[50px] h-[50px]">
-                        <p class="text-lg font-semibold text-white">Manufaktur</p>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="200"
-                        class="max-w-[340px] min-h-[85px] w-full h-[85px] flex p-5 bg-secondary rounded items-center gap-3 m-auto">
-                        <img src="{{ asset('assets/images/hospital-line.svg') }}" alt="icon"
-                            class="w-[50px] h-[50px]">
-                        <p class="text-lg font-semibold text-white">Kesehatan</p>
-                    </div>
-                </div>
-            </div>
-            <div class="flex flex-wrap justify-around gap-5 my-5 lg:justify-end lg:gap-7 md:mt-5 xl:mt-10">
-                <div data-aos="fade-left"
-                    class="max-w-[340px] min-h-[85px] w-full h-[85px] flex p-5 bg-secondary rounded items-center gap-3">
-                    <img src="{{ asset('assets/images/truck-line.svg') }}" alt="icon" class="w-[50px] h-[50px]">
-                    <p class="text-lg font-semibold text-white">Ekspedisi & Logistik</p>
-                </div>
-                <div data-aos="fade-left" data-aos-delay="200"
-                    class="max-w-[340px] min-h-[85px] w-full h-[85px] flex p-5 bg-secondary rounded items-center gap-3">
-                    <img src="{{ asset('assets/images/money-dollar-circle-line.svg') }}" alt="icon"
-                        class="w-[50px] h-[50px]">
-                    <p class="text-lg font-semibold text-white">Perbankan</p>
-                </div>
-                <div data-aos="fade-left" data-aos-delay="400"
-                    class="max-w-[340px] min-h-[85px] w-full h-[85px] flex p-5 bg-secondary rounded items-center gap-3">
-                    <img src="{{ asset('assets/images/building-line.svg') }}" alt="icon"
-                        class="w-[50px] h-[50px]">
-                    <p class="text-lg font-semibold text-white">Pemerintahan</p>
-                </div>
-            </div>
-            <div class="flex flex-wrap justify-around gap-5 lg:justify-start lg:gap-7 lg:mt-10">
-                <div data-aos="fade-right"
-                    class="max-w-[340px] min-h-[85px] w-full h-[85px] flex p-5 bg-secondary rounded items-center gap-3">
-                    <img src="{{ asset('assets/images/school-line.svg') }}" alt="icon"
-                        class="w-[50px] h-[50px]">
-                    <p class="text-lg font-semibold text-white">Pendidikan</p>
-                </div>
-                <div data-aos="fade-right" data-aos-delay="200"
-                    class="max-w-[340px] min-h-[85px] w-full h-[85px] flex p-5 bg-secondary rounded items-center gap-3">
-                    <img src="{{ asset('assets/images/home-office-line.svg') }}" alt="icon"
-                        class="w-[50px] h-[50px]">
-                    <p class="text-lg font-semibold text-white">Perumahan</p>
-                </div>
-                <div data-aos="fade-right" data-aos-delay="400"
-                    class="max-w-[340px] min-h-[85px] w-full h-[85px] flex p-5 bg-secondary rounded items-center gap-3">
-                    <img src="{{ asset('assets/images/store-3-line.svg') }}" alt="icon"
-                        class="w-[50px] h-[50px]">
-                    <p class="text-lg font-semibold text-white">Retail</p>
-                </div>
-            </div>
-        </div>
-    </section> --}}
 
     {{-- Price Cards --}}
     <section class="bg-semi-sky-blue" id="produk">
@@ -650,61 +390,6 @@
         </div>
     </section>
 
-    {{-- Review Cards --}}
-    {{-- <section id="reviews" class="relative overflow-hidden bg-semi-sky-blue">
-        <img src="{{ asset('assets/images/bg-circle-group-2.svg') }}" alt="icon"
-            class="absolute top-80 lg:left-0 lg:top-0">
-        <div class="w-[400px] h-[400px] rounded-full bg-primary absolute right-[-300px] lg:right-[-250px] top-[-50px]">
-        </div>
-
-        <div class="container relative z-10 p-5 mx-auto lg:p-10 ">
-            <div class="max-w-[700px] mx-auto ">
-                <p class="text-2xl font-semibold lg:text-center">DHAHA PRIMA Dipercaya Oleh 2000+ pengguna
-                    internet
-                    rumahan dan 200+
-                    pelaku
-                    usaha</p>
-                <p class="mt-5 text-sm leading-6 lg:text-center">Layanan internet yang kami distribusikan sudah
-                    digunakan dan
-                    dipercayai oleh
-                    ribuan
-                    perumahan serta
-                    ratusan pelaku usaha / industri dari berbagai macam bidang di Indonesia, layanan kami sudah terbukti
-                    dapat diandalkan setiap saat serta mampu memenuhi ekspektasi pelanggan.</p>
-            </div>
-
-            <div class="relative z-10 flex mt-20 swiper">
-                <div class="w-full pb-16 swiper-wrapper">
-                    @foreach ($reviewCards as $reviewCard)
-                        <div class="flex-col bg-white swiper-slide card-reviewflex">
-                            <div class="flex-1 w-full p-8">
-                                <p class="text-5xl text-primary">❝</p>
-                                <p class="text-sm leading-6 text-custom-text-card">{{ $reviewCard['text'] }}</p>
-                            </div>
-                            <div
-                                class="flex flex-wrap w-full p-8 border-t-[1px] border-default-border-color gap-4 footer">
-                                <div class="xl:w-[20%] w-full flex items-center">
-                                    <img src="{{ asset('assets/images/user-review-image.jpg') }}" alt="user-image"
-                                        class="w-[70px] h-[70px] rounded object-cover">
-                                </div>
-                                <div class="xl:w-[75%] w-full flex flex-col gap-2 justify-center ">
-                                    <div class="flex items-center gap-1">
-                                        <img src="{{ asset('assets/images/star-icon.svg') }}" alt="icon"
-                                            class="w-[20px] h-[20px]">
-                                        <p class="font-semibold">5.0</p>
-                                    </div>
-                                    <p class="text-sm font-semibold">{{ $reviewCard['name'] }}</p>
-                                    <p class="text-sm">{{ $reviewCard['job'] }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section> --}}
-
     {{-- Footer --}}
     @include('layouts.footer')
 
@@ -735,11 +420,6 @@
         </div>
     </div>
 
-    {{-- <button onclick="toTop(this)"
-        class="fixed z-50 grid w-12 h-12 rounded bg-primary bottom-8 right-8 place-items-center toTop">
-        <i class="text-white ri-arrow-up-line"></i>
-    </button> --}}
-
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -747,79 +427,27 @@
         AOS.init();
 
         document.addEventListener("DOMContentLoaded", function() {
-            const loader = document.querySelector("#loader-wrapper")
-            setTimeout(() => {
-                loader.classList.add("remove-loader")
-                setTimeout(() => {
-                    loader.remove()
-                }, 5200);
-            }, 800);
+            // const loader = document.querySelector("#loader-wrapper")
+            // setTimeout(() => {
+            //     loader.classList.add("remove-loader")
+            //     setTimeout(() => {
+            //         loader.remove()
+            //     }, 5200);
+            // }, 800);
         })
 
         window.onscroll = function() {
             let nav = document.querySelector("nav")
+            let nav_image = nav.querySelector(".logo")
             let top = window.pageYOffset;
             if (top > 100) {
                 nav.classList.add("scrolled")
+                nav_image.src = "{{ asset('assets/images/logo-barokahnet.svg') }}"
             } else {
                 nav.classList.remove("scrolled")
+                nav_image.src = "{{ asset('assets/images/logo-barokahnet-footer.svg') }}"
             }
-
-            // scrollFunction()
         };
-
-        // function scrollFunction() {
-        //     const btnToTop = document.querySelector(".toTop")
-        //     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        //         btnToTop.style.display = "grid";
-        //     } else {
-        //         btnToTop.style.display = "none";
-        //     }
-        // }
-
-        // const swiper = new Swiper('.swiper', {
-        //     direction: 'horizontal',
-        //     freeMode: true,
-        //     loop: true,
-        //     slidesPerView: 3,
-        //     centeredSlides: true,
-        //     spaceBetween: 40,
-
-        //     keyboard: {
-        //         enabled: true,
-        //     },
-
-        //     autoplay: {
-        //         delay: 2000,
-        //         disableOnInteraction: false,
-        //     },
-
-        //     pagination: {
-        //         el: '.swiper-pagination',
-        //         dynamicBullets: true,
-        //         clickable: true,
-        //     },
-
-        //     breakpoints: {
-        //         1280: {
-        //             slidesPerView: 3,
-        //         },
-        //         1024: {
-        //             slidesPerView: 2,
-        //         },
-        //         768: {
-        //             slidesPerView: 2,
-        //         },
-        //         320: {
-        //             slidesPerView: 1,
-        //         },
-        //     }
-        // });
-
-        // function toTop() {
-        //     document.body.scrollTop = 0;
-        //     document.documentElement.scrollTop = 0;
-        // }
 
         function toggleNavbar(e) {
             let menu = document.querySelector(".menu")

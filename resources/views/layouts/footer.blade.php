@@ -53,20 +53,6 @@
             </div>
         </div>
         <div class="flex flex-wrap justify-between gap-5 py-5 bottom-footer border-t-[1px] border-default-border-color">
-            {{-- <div class="flex gap-5">
-                <a href="#" class="w-[20px] h-[20px]">
-                    <img src="{{ asset('assets/images/facebook-icon.svg') }}" alt="icon">
-                </a>
-                <a href="#" class="w-[20px] h-[20px]">
-                    <img src="{{ asset('assets/images/instagram-icon.svg') }}" alt="icon">
-                </a>
-                <a href="#" class="w-[20px] h-[20px]">
-                    <img src="{{ asset('assets/images/twitter-x-icon.svg') }}" alt="icon">
-                </a>
-                <a href="#" class="w-[20px] h-[20px]">
-                    <img src="{{ asset('assets/images/youtube-icon.svg') }}" alt="icon">
-                </a>
-            </div> --}}
             <p class="text-sm font-light tracking-wider text-white ">© 2024 PT BAROKAH NET</p>
         </div>
     </div>
